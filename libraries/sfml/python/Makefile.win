@@ -1,0 +1,17 @@
+SRC = src/Blend.cpp src/Clock.cpp src/Color.cpp src/Drawable.cpp src/Event.cpp src/Image.cpp src/Input.cpp src/Joy.cpp src/Key.cpp src/Mouse.cpp src/Music.cpp src/PostFX.cpp src/Rect.cpp src/RenderWindow.cpp src/Sleep.cpp src/Sprite.cpp src/String.cpp src/VideoMode.cpp src/View.cpp src/Window.cpp src/WindowStyle.cpp src/main.cpp src/Listener.cpp src/Sound.cpp src/SoundBuffer.cpp src/SoundBufferRecorder.cpp src/SoundRecorder.cpp src/Font.cpp src/Shape.cpp src/WindowSettings.cpp
+OBJ = $(SRC:.cpp=.o)
+DEST = PySFML/sf.pyd
+CPP = wine g++
+
+$(DEST): $(OBJ)
+    $(CPP) -Wl,--enable-runtime-pseudo-reloc -shared -s $(OBJ) -L../lib/mingw-LC:/Python25/libs -LC:/Python25/PCBuild -lsfml-graphics-s -lsfml-audio-s -lsfml-window-s -lsfml-system-s -lpython25 -o $(DEST)
+
+%.o: %.cpp
+    $(CPP) -fno-strict-aliasing -DNDEBUG -g -O2 -Wall -I../include -IC:/Python25/include -o $@ -c $<
+
+move:
+    cp -r PySFML/ build/lib.win32-2.5/
+
+clean:
+    rm -f $(OBJ)
+
