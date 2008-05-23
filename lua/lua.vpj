@@ -1,0 +1,193 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Debug"
+		Type="cpp"
+		DebugCallbackName="gdb"
+		OutputFile="%bdlua"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='cc -c -g %i %defd -o "%bd%n.o" "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link">
+				<Exec CmdLine='cc -g -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Config
+		Name="Release"
+		Type="cpp"
+		DebugCallbackName="gdb"
+		OutputFile="%bdlua"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				OutputExts="*.o"
+				RunFromDir="%rw">
+				<Exec CmdLine='cc -c -O %i %defd -o "%bd%n.o" "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link">
+				<Exec CmdLine='cc -O -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Rules Name="Compile">
+		<Rule
+			InputExts="*.s"
+			OutputExts="*.o"
+			LinkObject="1">
+			<Exec CmdLine='as -o "%bd%n.o" "%f"'/>
+		</Rule>
+	</Rules>
+	<Files>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+			<F N="src/lapi.c"/>
+			<F N="src/lauxlib.c"/>
+			<F N="src/lbaselib.c"/>
+			<F N="src/lcode.c"/>
+			<F N="src/ldblib.c"/>
+			<F N="src/ldebug.c"/>
+			<F N="src/ldo.c"/>
+			<F N="src/ldump.c"/>
+			<F N="src/lfunc.c"/>
+			<F N="src/lgc.c"/>
+			<F N="src/linit.c"/>
+			<F N="src/liolib.c"/>
+			<F N="src/llex.c"/>
+			<F N="src/lmathlib.c"/>
+			<F N="src/lmem.c"/>
+			<F N="src/loadlib.c"/>
+			<F N="src/lobject.c"/>
+			<F N="src/lopcodes.c"/>
+			<F N="src/loslib.c"/>
+			<F N="src/lparser.c"/>
+			<F N="src/lstate.c"/>
+			<F N="src/lstring.c"/>
+			<F N="src/lstrlib.c"/>
+			<F N="src/ltable.c"/>
+			<F N="src/ltablib.c"/>
+			<F N="src/ltm.c"/>
+			<F N="src/lua.c"/>
+			<F N="src/luac.c"/>
+			<F N="src/lundump.c"/>
+			<F N="src/lvm.c"/>
+			<F N="src/lzio.c"/>
+			<F N="src/print.c"/>
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
+			<F N="src/lapi.h"/>
+			<F N="src/lauxlib.h"/>
+			<F N="src/lcode.h"/>
+			<F N="src/ldebug.h"/>
+			<F N="src/ldo.h"/>
+			<F N="src/lfunc.h"/>
+			<F N="src/lgc.h"/>
+			<F N="src/llex.h"/>
+			<F N="src/llimits.h"/>
+			<F N="src/lmem.h"/>
+			<F N="src/lobject.h"/>
+			<F N="src/lopcodes.h"/>
+			<F N="src/lparser.h"/>
+			<F N="src/lstate.h"/>
+			<F N="src/lstring.h"/>
+			<F N="src/ltable.h"/>
+			<F N="src/ltm.h"/>
+			<F N="src/lua.h"/>
+			<F N="src/luaconf.h"/>
+			<F N="src/lualib.h"/>
+			<F N="src/lundump.h"/>
+			<F N="src/lvm.h"/>
+			<F N="src/lzio.h"/>
+		</Folder>
+	</Files>
+</Project>
