@@ -1,0 +1,67 @@
+setup.py
+include src/Blend.cpp
+include src/Clock.cpp
+include src/Color.cpp
+include src/Drawable.cpp
+include src/Event.cpp
+include src/Image.cpp
+include src/Input.cpp
+include src/Joy.cpp
+include src/Key.cpp
+include src/Mouse.cpp
+include src/Music.cpp
+include src/PostFX.cpp
+include src/Rect.cpp
+include src/RenderWindow.cpp
+include src/Sleep.cpp
+include src/Sprite.cpp
+include src/String.cpp
+include src/VideoMode.cpp
+include src/View.cpp
+include src/Window.cpp
+include src/WindowStyle.cpp
+include src/main.cpp
+include src/Font.cpp
+include src/Shape.cpp
+include src/WindowSettings.cpp
+
+include src/Listener.cpp
+include src/Sound.cpp
+include src/SoundBuffer.cpp
+include src/SoundBufferRecorder.cpp
+include src/SoundRecorder.cpp
+
+
+include src/Blend.hpp
+include src/Clock.hpp
+include src/Color.hpp
+include src/Drawable.hpp
+include src/Event.hpp
+include src/Image.hpp
+include src/Input.hpp
+include src/Joy.hpp
+include src/Key.hpp
+include src/Mouse.hpp
+include src/Music.hpp
+include src/PostFX.hpp
+include src/Rect.hpp
+include src/RenderWindow.hpp
+include src/Sleep.hpp
+include src/Sprite.hpp
+include src/String.hpp
+include src/VideoMode.hpp
+include src/View.hpp
+include src/Window.hpp
+include src/WindowStyle.hpp
+include src/main.hpp
+include src/Font.hpp
+include src/Shape.hpp
+include src/WindowSettings.hpp
+include src/offsetof.hpp
+
+include src/Listener.hpp
+include src/Sound.hpp
+include src/SoundBuffer.hpp
+include src/SoundBufferRecorder.hpp
+include src/SoundRecorder.hpp
+

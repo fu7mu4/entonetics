@@ -1,0 +1,5605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		A01E92D70DCDE74600C54529 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "multi-window-opengl.cpp";
+			path = "test/multi-window-opengl.cpp";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A01E92ED0DCDEB6000C54529 = {
+			fileRef = A0A680480DC345FC00F4CA69;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A03132AF0D8DE25500E3DDD8 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E37E0D8BF87A002236B4;
+			remoteInfo = "sfml-system";
+		};
+		A03132B00D8DE25500E3DDD8 = {
+			isa = PBXTargetDependency;
+			target = A093E37E0D8BF87A002236B4;
+			targetProxy = A03132AF0D8DE25500E3DDD8;
+		};
+		A03132B80D8DE25E00E3DDD8 = {
+			fileRef = A093E37F0D8BF87A002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A07EA05A0DB657A9007C7747 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A0C93EB30D9A9CA000B9E0C8;
+			remoteInfo = "sfml-window-cocoa";
+		};
+		A07EA05B0DB657A9007C7747 = {
+			isa = PBXTargetDependency;
+			target = A0C93EB30D9A9CA000B9E0C8;
+			targetProxy = A07EA05A0DB657A9007C7747;
+		};
+		A07EA05C0DB657C0007C7747 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A0C93EB30D9A9CA000B9E0C8;
+			remoteInfo = "sfml-window-cocoa";
+		};
+		A07EA05D0DB657C0007C7747 = {
+			isa = PBXTargetDependency;
+			target = A0C93EB30D9A9CA000B9E0C8;
+			targetProxy = A07EA05C0DB657C0007C7747;
+		};
+		A093E3660D8BF860002236B4 = {
+			children = (
+				A093E3AD0D8BF8AD002236B4,
+				A093E3B90D8BF8C2002236B4,
+				A093E3BC0D8BF8C7002236B4,
+				A093E3B30D8BF8B5002236B4,
+				A093E3B00D8BF8B0002236B4,
+				A093E3B60D8BF8BB002236B4,
+				A0A6803E0DC3455800F4CA69,
+				A093E3760D8BF86E002236B4,
+			);
+			isa = PBXGroup;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A093E3680D8BF860002236B4 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		A093E3690D8BF860002236B4 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		A093E36A0D8BF860002236B4 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				A093E3680D8BF860002236B4,
+				A093E3690D8BF860002236B4,
+			);
+			hasScannedForEncodings = 0;
+			isa = PBXProject;
+			mainGroup = A093E3660D8BF860002236B4;
+			productRefGroup = A093E3760D8BF86E002236B4;
+			projectDirPath = "";
+			targets = (
+				A0F0BA820D92E4F500056981,
+				A093E3740D8BF86E002236B4,
+				A093E3990D8BF89B002236B4,
+				A093E3A20D8BF8A2002236B4,
+				A093E3870D8BF885002236B4,
+				A093E37E0D8BF87A002236B4,
+				A093E3900D8BF892002236B4,
+				A0C93EB30D9A9CA000B9E0C8,
+				A0A680300DC3453100F4CA69,
+			);
+		};
+		A093E3700D8BF86E002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E4300D8BF9E3002236B4,
+				A093E4310D8BF9E3002236B4,
+				A093E4320D8BF9E3002236B4,
+				A093E4330D8BF9E3002236B4,
+				A093E4340D8BF9E3002236B4,
+				A093E4350D8BF9E3002236B4,
+				A093E4360D8BF9E3002236B4,
+				A093E4370D8BF9E3002236B4,
+				A093E4380D8BF9E3002236B4,
+				A093E4390D8BF9E3002236B4,
+				A093E43A0D8BF9E3002236B4,
+				A093E43B0D8BF9E3002236B4,
+				A093E43C0D8BF9E3002236B4,
+				A093E43D0D8BF9E3002236B4,
+				A093E43E0D8BF9E3002236B4,
+				A093E43F0D8BF9E3002236B4,
+				A093E4410D8BF9E3002236B4,
+				A093E4420D8BF9E3002236B4,
+				A093E4430D8BF9E3002236B4,
+				A093E4440D8BF9E3002236B4,
+				A093E4450D8BF9E3002236B4,
+				A093E4460D8BF9E3002236B4,
+				A093E4470D8BF9E3002236B4,
+				A093E4480D8BF9E3002236B4,
+				A093E4490D8BF9E3002236B4,
+				A093E44A0D8BF9E3002236B4,
+				A093E44C0D8BF9E3002236B4,
+				A093E44D0D8BF9E3002236B4,
+				A093E44E0D8BF9E3002236B4,
+				A093E44F0D8BF9E3002236B4,
+				A093E4500D8BF9E3002236B4,
+				A093E4520D8BF9E3002236B4,
+				A093E4530D8BF9E3002236B4,
+				A093E4540D8BF9E3002236B4,
+				A093E4550D8BF9E3002236B4,
+				A093E4560D8BF9E3002236B4,
+				A093E4570D8BF9E3002236B4,
+				A093E4580D8BF9E3002236B4,
+				A093E4590D8BF9E3002236B4,
+				A093E45A0D8BF9E3002236B4,
+				A093E45B0D8BF9E3002236B4,
+				A093E45C0D8BF9E3002236B4,
+				A093E45E0D8BF9E3002236B4,
+				A093E4620D8BF9E3002236B4,
+				A093E4630D8BF9E3002236B4,
+				A093E4650D8BF9E3002236B4,
+				A093E4690D8BF9E3002236B4,
+				A093E46B0D8BF9E3002236B4,
+				A093E46C0D8BF9E3002236B4,
+				A093E46D0D8BF9E3002236B4,
+				A093E46E0D8BF9E3002236B4,
+				A093E46F0D8BF9E3002236B4,
+				A0BA41F70DDF0C9700039094,
+				A0BA42050DDF0D1B00039094,
+				A0BA420E0DDF0D5D00039094,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3710D8BF86E002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A0BE19130D9164F5007D4CAD,
+				A0BE19140D9164F6007D4CAD,
+				A0BE19170D91655C007D4CAD,
+				A0BA41F60DDF0C9700039094,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3720D8BF86E002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E3D00D8BF918002236B4,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3730D8BF86E002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3740D8BF86E002236B4 = {
+			buildPhases = (
+				A093E3700D8BF86E002236B4,
+				A093E3710D8BF86E002236B4,
+				A093E3720D8BF86E002236B4,
+				A093E3730D8BF86E002236B4,
+				A0BA42130DDF0E3F00039094,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../src ${SRCROOT}/../include";
+				INFOPLIST_FILE = "SFML-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = SFML;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = SFML;
+			productName = SFML;
+			productReference = A093E3750D8BF86E002236B4;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>SFML</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.SFML</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A093E3750D8BF86E002236B4 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = SFML.framework;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A093E3760D8BF86E002236B4 = {
+			children = (
+				A093E3750D8BF86E002236B4,
+				A093E37F0D8BF87A002236B4,
+				A093E3880D8BF885002236B4,
+				A093E3910D8BF892002236B4,
+				A093E39A0D8BF89B002236B4,
+				A093E3A30D8BF8A2002236B4,
+				A0C93EB40D9A9CA000B9E0C8,
+				A0A680310DC3453100F4CA69,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A093E3770D8BF86E002236B4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "SFML-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E37A0D8BF87A002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A09EEBF70D8C19BF00F6C625,
+				A09EEBFB0D8C19BF00F6C625,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E37B0D8BF87A002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E37C0D8BF87A002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A09EEBF80D8C19BF00F6C625,
+				A09EEBF90D8C19BF00F6C625,
+				A09EEBFA0D8C19BF00F6C625,
+				A09EEBFC0D8C19BF00F6C625,
+				A09EEBFD0D8C19BF00F6C625,
+				A09EEBFE0D8C19BF00F6C625,
+				A09EEBFF0D8C19BF00F6C625,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E37D0D8BF87A002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E37E0D8BF87A002236B4 = {
+			buildPhases = (
+				A093E37A0D8BF87A002236B4,
+				A093E37B0D8BF87A002236B4,
+				A093E37C0D8BF87A002236B4,
+				A093E37D0D8BF87A002236B4,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../../src ${SRCROOT}/../../include";
+				INFOPLIST_FILE = "sfml-system-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-system";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-system";
+			productName = "sfml-system";
+			productReference = A093E37F0D8BF87A002236B4;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>sfml-system</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.sfml_system</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A093E37F0D8BF87A002236B4 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-system.framework";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A093E3800D8BF87A002236B4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "sfml-system-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3830D8BF885002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A0F1188D0D9FB60300138E8D,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3840D8BF885002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3850D8BF885002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A09EEBCF0D8C194D00F6C625,
+				A09EEBD00D8C194D00F6C625,
+				A09EEBD10D8C194D00F6C625,
+				A09EEBD20D8C194D00F6C625,
+				A09EEBD30D8C194D00F6C625,
+				A0F118970D9FB63F00138E8D,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3860D8BF885002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3870D8BF885002236B4 = {
+			buildPhases = (
+				A093E3830D8BF885002236B4,
+				A093E3840D8BF885002236B4,
+				A093E3850D8BF885002236B4,
+				A093E3860D8BF885002236B4,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../../src ${SRCROOT}/../../include";
+				INFOPLIST_FILE = "sfml-network-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-network";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-network";
+			productName = "sfml-network";
+			productReference = A093E3880D8BF885002236B4;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>sfml-network</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.sfml_network</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A093E3880D8BF885002236B4 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-network.framework";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A093E3890D8BF885002236B4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "sfml-network-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E38C0D8BF892002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A09EEC210D8C1A1B00F6C625,
+				A09EEC230D8C1A1B00F6C625,
+				A09EEC240D8C1A1B00F6C625,
+				A09EEC2C0D8C1A1B00F6C625,
+				A0A737340DA796C900B58BB9,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E38D0D8BF892002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E38E0D8BF892002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A09EEC1C0D8C1A1B00F6C625,
+				A09EEC200D8C1A1B00F6C625,
+				A09EEC220D8C1A1B00F6C625,
+				A09EEC260D8C1A1B00F6C625,
+				A09EEC2A0D8C1A1B00F6C625,
+				A09EEC2B0D8C1A1B00F6C625,
+				A0BE192F0D9165BC007D4CAD,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E38F0D8BF892002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A03132B80D8DE25E00E3DDD8,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3900D8BF892002236B4 = {
+			buildPhases = (
+				A093E38C0D8BF892002236B4,
+				A093E38D0D8BF892002236B4,
+				A093E38E0D8BF892002236B4,
+				A093E38F0D8BF892002236B4,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../../include ${SRCROOT}/../../src";
+				INFOPLIST_FILE = "sfml-window-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "-DSFML_IMPL_CARBON";
+				OTHER_LDFLAGS = "-framework CoreFoundation -framework Carbon -framework AGL -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-window";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				A03132B00D8DE25500E3DDD8,
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-window-carbon";
+			productName = "sfml-window";
+			productReference = A093E3910D8BF892002236B4;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>sfml-window</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.sfml_window</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A093E3910D8BF892002236B4 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-window.framework";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A093E3920D8BF892002236B4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "sfml-window-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3950D8BF89B002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E51A0D8BFDC9002236B4,
+				A093E51C0D8BFDC9002236B4,
+				A093E5220D8BFDC9002236B4,
+				A093E5250D8BFDC9002236B4,
+				A093E5260D8BFDC9002236B4,
+				A093E5450D8BFE29002236B4,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3960D8BF89B002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3970D8BF89B002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E5190D8BFDC9002236B4,
+				A093E51B0D8BFDC9002236B4,
+				A093E51D0D8BFDC9002236B4,
+				A093E51E0D8BFDC9002236B4,
+				A093E51F0D8BFDC9002236B4,
+				A093E5200D8BFDC9002236B4,
+				A093E5210D8BFDC9002236B4,
+				A093E5230D8BFDC9002236B4,
+				A093E5240D8BFDC9002236B4,
+				A093E5270D8BFDC9002236B4,
+				A093E5280D8BFDC9002236B4,
+				A093E5290D8BFDC9002236B4,
+				A093E5440D8BFE29002236B4,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3980D8BF89B002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E5480D8BFEAE002236B4,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3990D8BF89B002236B4 = {
+			buildPhases = (
+				A093E3950D8BF89B002236B4,
+				A093E3960D8BF89B002236B4,
+				A093E3970D8BF89B002236B4,
+				A093E3980D8BF89B002236B4,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../../src ${SRCROOT}/../../include";
+				INFOPLIST_FILE = "sfml-audio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-framework OpenAL -lsndfile";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-audio";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				A093E54A0D8BFEB9002236B4,
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-audio";
+			productName = "sfml-audio";
+			productReference = A093E39A0D8BF89B002236B4;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>sfml-audio</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.sfml_audio</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A093E39A0D8BF89B002236B4 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-audio.framework";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A093E39B0D8BF89B002236B4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "sfml-audio-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E39E0D8BF8A2002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E5810D8BFF33002236B4,
+				A093E5870D8BFF33002236B4,
+				A093E58C0D8BFF33002236B4,
+				A093E5AE0D8BFFBA002236B4,
+				A093E5B00D8BFFBA002236B4,
+				A093E5B20D8BFFBA002236B4,
+				A093E5B30D8BFFBA002236B4,
+				A093E5B40D8BFFBA002236B4,
+				A093E5D40D8BFFC6002236B4,
+				A093E5D50D8BFFC6002236B4,
+				A093E5D70D8BFFC6002236B4,
+				A093E5D80D8BFFC6002236B4,
+				A093E5D90D8BFFC6002236B4,
+				A093E5DC0D8BFFC6002236B4,
+				A093E5DF0D8BFFC6002236B4,
+				A093E5E00D8BFFC6002236B4,
+				A093E5E10D8BFFC6002236B4,
+				A093E5E30D8BFFC6002236B4,
+				A093E62A0D8BFFD5002236B4,
+				A093E63B0D8BFFD5002236B4,
+				A093E63D0D8BFFD5002236B4,
+				A093E63F0D8BFFD5002236B4,
+				A093E6400D8BFFD5002236B4,
+				A093E6470D8BFFD5002236B4,
+				A093E64D0D8BFFD5002236B4,
+				A093E6510D8BFFD5002236B4,
+				A093E6530D8BFFD5002236B4,
+				A093E6540D8BFFD5002236B4,
+				A093E6550D8BFFD5002236B4,
+				A093E65B0D8BFFD5002236B4,
+				A093E67D0D8BFFE5002236B4,
+				A093E6880D8BFFE5002236B4,
+				A0BA424B0DDF189200039094,
+				A0BA425A0DDF18B700039094,
+				A0BA425B0DDF18B700039094,
+				A0BA425C0DDF18B700039094,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E39F0D8BF8A2002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3A00D8BF8A2002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A093E5840D8BFF33002236B4,
+				A093E5850D8BFF33002236B4,
+				A093E5860D8BFF33002236B4,
+				A093E5880D8BFF33002236B4,
+				A093E5890D8BFF33002236B4,
+				A093E58A0D8BFF33002236B4,
+				A093E58B0D8BFF33002236B4,
+				A093E58D0D8BFF33002236B4,
+				A093E58E0D8BFF33002236B4,
+				A093E58F0D8BFF33002236B4,
+				A093E5900D8BFF33002236B4,
+				A093E5920D8BFF33002236B4,
+				A093E5930D8BFF33002236B4,
+				A093E5AF0D8BFFBA002236B4,
+				A093E5B10D8BFFBA002236B4,
+				A093E5B50D8BFFBA002236B4,
+				A093E5D00D8BFFC6002236B4,
+				A093E5D10D8BFFC6002236B4,
+				A093E5D20D8BFFC6002236B4,
+				A093E5D30D8BFFC6002236B4,
+				A093E5D60D8BFFC6002236B4,
+				A093E5DA0D8BFFC6002236B4,
+				A093E5DB0D8BFFC6002236B4,
+				A093E5DD0D8BFFC6002236B4,
+				A093E5DE0D8BFFC6002236B4,
+				A093E5E20D8BFFC6002236B4,
+				A093E6240D8BFFD5002236B4,
+				A093E6250D8BFFD5002236B4,
+				A093E6260D8BFFD5002236B4,
+				A093E6270D8BFFD5002236B4,
+				A093E6280D8BFFD5002236B4,
+				A093E6290D8BFFD5002236B4,
+				A093E62B0D8BFFD5002236B4,
+				A093E62C0D8BFFD5002236B4,
+				A093E62D0D8BFFD5002236B4,
+				A093E62E0D8BFFD5002236B4,
+				A093E62F0D8BFFD5002236B4,
+				A093E6300D8BFFD5002236B4,
+				A093E6310D8BFFD5002236B4,
+				A093E6320D8BFFD5002236B4,
+				A093E6330D8BFFD5002236B4,
+				A093E6340D8BFFD5002236B4,
+				A093E6350D8BFFD5002236B4,
+				A093E6360D8BFFD5002236B4,
+				A093E6370D8BFFD5002236B4,
+				A093E6380D8BFFD5002236B4,
+				A093E6390D8BFFD5002236B4,
+				A093E63A0D8BFFD5002236B4,
+				A093E63C0D8BFFD5002236B4,
+				A093E63E0D8BFFD5002236B4,
+				A093E6410D8BFFD5002236B4,
+				A093E6420D8BFFD5002236B4,
+				A093E6430D8BFFD5002236B4,
+				A093E6440D8BFFD5002236B4,
+				A093E6450D8BFFD5002236B4,
+				A093E6460D8BFFD5002236B4,
+				A093E6480D8BFFD5002236B4,
+				A093E6490D8BFFD5002236B4,
+				A093E64A0D8BFFD5002236B4,
+				A093E64B0D8BFFD5002236B4,
+				A093E64C0D8BFFD5002236B4,
+				A093E64E0D8BFFD5002236B4,
+				A093E64F0D8BFFD5002236B4,
+				A093E6500D8BFFD5002236B4,
+				A093E6520D8BFFD5002236B4,
+				A093E6560D8BFFD5002236B4,
+				A093E6570D8BFFD5002236B4,
+				A093E6580D8BFFD5002236B4,
+				A093E6590D8BFFD5002236B4,
+				A093E65A0D8BFFD5002236B4,
+				A093E65C0D8BFFD5002236B4,
+				A093E65D0D8BFFD5002236B4,
+				A093E6770D8BFFE5002236B4,
+				A093E6780D8BFFE5002236B4,
+				A093E6790D8BFFE5002236B4,
+				A093E67A0D8BFFE5002236B4,
+				A093E67B0D8BFFE5002236B4,
+				A093E67C0D8BFFE5002236B4,
+				A093E67E0D8BFFE5002236B4,
+				A093E67F0D8BFFE5002236B4,
+				A093E6800D8BFFE5002236B4,
+				A093E6810D8BFFE5002236B4,
+				A093E6820D8BFFE5002236B4,
+				A093E6830D8BFFE5002236B4,
+				A093E6840D8BFFE5002236B4,
+				A093E6850D8BFFE5002236B4,
+				A093E6860D8BFFE5002236B4,
+				A093E6870D8BFFE5002236B4,
+				A093E6890D8BFFE5002236B4,
+				A0BA42440DDF186600039094,
+				A0BA42590DDF18B700039094,
+				A0BA42680DDF18F100039094,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3A10D8BF8A2002236B4 = {
+			buildActionMask = 2147483647;
+			files = (
+				A09EEB990D8C17D600F6C625,
+				A0BE1A200D917332007D4CAD,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A093E3A20D8BF8A2002236B4 = {
+			buildPhases = (
+				A093E39E0D8BF8A2002236B4,
+				A093E39F0D8BF8A2002236B4,
+				A093E3A00D8BF8A2002236B4,
+				A093E3A10D8BF8A2002236B4,
+			);
+			buildRules = (
+				A09EEA9F0D8C074D00F6C625,
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../../src ${SRCROOT}/../../include";
+				INFOPLIST_FILE = "sfml-graphics-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-framework OpenGL /usr/local/lib/libfreetype.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-graphics";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				A07EA05D0DB657C0007C7747,
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-graphics";
+			productName = "sfml-graphics";
+			productReference = A093E3A30D8BF8A2002236B4;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>sfml-graphics</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.sfml_graphics</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A093E3A30D8BF8A2002236B4 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-graphics.framework";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A093E3A40D8BF8A2002236B4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = "sfml-graphics-Info.plist";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3AD0D8BF8AD002236B4 = {
+			children = (
+				A093E3E20D8BF9E2002236B4,
+				A093E3CF0D8BF918002236B4,
+				A093E3770D8BF86E002236B4,
+			);
+			isa = PBXGroup;
+			name = SFML;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3B00D8BF8B0002236B4 = {
+			children = (
+				A09EEBE40D8C19B000F6C625,
+				A093E3800D8BF87A002236B4,
+			);
+			isa = PBXGroup;
+			name = "sfml-system";
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3B30D8BF8B5002236B4 = {
+			children = (
+				A09EEBAA0D8C18FA00F6C625,
+				A093E3890D8BF885002236B4,
+			);
+			isa = PBXGroup;
+			name = "sfml-network";
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3B60D8BF8BB002236B4 = {
+			children = (
+				A09EEC030D8C19F400F6C625,
+				A093E3920D8BF892002236B4,
+			);
+			isa = PBXGroup;
+			name = "sfml-window";
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3B90D8BF8C2002236B4 = {
+			children = (
+				A093E4FE0D8BFD13002236B4,
+				A093E39B0D8BF89B002236B4,
+			);
+			isa = PBXGroup;
+			name = "sfml-audio";
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3BC0D8BF8C7002236B4 = {
+			children = (
+				A093E5580D8BFF07002236B4,
+				A093E3A40D8BF8A2002236B4,
+			);
+			isa = PBXGroup;
+			name = "sfml-graphics";
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3CF0D8BF918002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			path = dummy.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3D00D8BF918002236B4 = {
+			fileRef = A093E3CF0D8BF918002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E3E20D8BF9E2002236B4 = {
+			children = (
+				A093E3E30D8BF9E2002236B4,
+				A093E3EC0D8BF9E2002236B4,
+				A093E3ED0D8BF9E2002236B4,
+				A093E3EE0D8BF9E2002236B4,
+				A093E3FC0D8BF9E2002236B4,
+				A093E3FD0D8BF9E2002236B4,
+				A093E40A0D8BF9E2002236B4,
+				A093E40B0D8BF9E2002236B4,
+				A093E41D0D8BF9E3002236B4,
+				A093E41E0D8BF9E3002236B4,
+				A093E42F0D8BF9E3002236B4,
+			);
+			isa = PBXGroup;
+			name = SFML;
+			path = ../../include/SFML;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E30D8BF9E2002236B4 = {
+			children = (
+				A093E3E40D8BF9E2002236B4,
+				A093E3E50D8BF9E2002236B4,
+				A093E3E60D8BF9E2002236B4,
+				A093E3E70D8BF9E2002236B4,
+				A093E3E80D8BF9E2002236B4,
+				A093E3E90D8BF9E2002236B4,
+				A093E3EA0D8BF9E2002236B4,
+				A093E3EB0D8BF9E2002236B4,
+			);
+			isa = PBXGroup;
+			name = Audio;
+			path = ../../include/SFML/Audio;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E40D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = AudioResource.hpp;
+			path = ../../include/SFML/Audio/AudioResource.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E50D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Listener.hpp;
+			path = ../../include/SFML/Audio/Listener.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E60D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Music.hpp;
+			path = ../../include/SFML/Audio/Music.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E70D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Sound.hpp;
+			path = ../../include/SFML/Audio/Sound.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E80D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundBuffer.hpp;
+			path = ../../include/SFML/Audio/SoundBuffer.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3E90D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundBufferRecorder.hpp;
+			path = ../../include/SFML/Audio/SoundBufferRecorder.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3EA0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundRecorder.hpp;
+			path = ../../include/SFML/Audio/SoundRecorder.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3EB0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundStream.hpp;
+			path = ../../include/SFML/Audio/SoundStream.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3EC0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Audio.hpp;
+			path = ../../include/SFML/Audio.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3ED0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Config.hpp;
+			path = ../../include/SFML/Config.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3EE0D8BF9E2002236B4 = {
+			children = (
+				A093E3EF0D8BF9E2002236B4,
+				A093E3F00D8BF9E2002236B4,
+				A093E3F10D8BF9E2002236B4,
+				A093E3F20D8BF9E2002236B4,
+				A0BA41F40DDF0C9700039094,
+				A0BA41F50DDF0C9700039094,
+				A093E3F30D8BF9E2002236B4,
+				A093E3F40D8BF9E2002236B4,
+				A093E3F50D8BF9E2002236B4,
+				A093E3F60D8BF9E2002236B4,
+				A093E3F70D8BF9E2002236B4,
+				A093E3F80D8BF9E2002236B4,
+				A093E3F90D8BF9E2002236B4,
+				A093E3FA0D8BF9E2002236B4,
+				A093E3FB0D8BF9E2002236B4,
+			);
+			isa = PBXGroup;
+			name = Graphics;
+			path = ../../include/SFML/Graphics;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3EF0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Color.hpp;
+			path = ../../include/SFML/Graphics/Color.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F00D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Drawable.hpp;
+			path = ../../include/SFML/Graphics/Drawable.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F10D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Font.hpp;
+			path = ../../include/SFML/Graphics/Font.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F20D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Image.hpp;
+			path = ../../include/SFML/Graphics/Image.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F30D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = PostFX.hpp;
+			path = ../../include/SFML/Graphics/PostFX.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F40D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Rect.hpp;
+			path = ../../include/SFML/Graphics/Rect.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F50D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = Rect.inl;
+			path = ../../include/SFML/Graphics/Rect.inl;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F60D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = RenderWindow.hpp;
+			path = ../../include/SFML/Graphics/RenderWindow.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F70D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Shape.hpp;
+			path = ../../include/SFML/Graphics/Shape.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F80D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Sprite.hpp;
+			path = ../../include/SFML/Graphics/Sprite.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3F90D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = String.hpp;
+			path = ../../include/SFML/Graphics/String.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3FA0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = VideoResource.hpp;
+			path = ../../include/SFML/Graphics/VideoResource.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3FB0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = View.hpp;
+			path = ../../include/SFML/Graphics/View.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3FC0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Graphics.hpp;
+			path = ../../include/SFML/Graphics.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3FD0D8BF9E2002236B4 = {
+			children = (
+				A093E3FE0D8BF9E2002236B4,
+				A093E3FF0D8BF9E2002236B4,
+				A093E4000D8BF9E2002236B4,
+				A093E4010D8BF9E2002236B4,
+				A0F1188C0D9FB60300138E8D,
+				A093E4020D8BF9E2002236B4,
+				A093E4030D8BF9E2002236B4,
+				A093E4040D8BF9E2002236B4,
+				A093E4050D8BF9E2002236B4,
+				A093E4060D8BF9E2002236B4,
+			);
+			isa = PBXGroup;
+			name = Network;
+			path = ../../include/SFML/Network;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3FE0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = IPAddress.hpp;
+			path = ../../include/SFML/Network/IPAddress.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E3FF0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Packet.hpp;
+			path = ../../include/SFML/Network/Packet.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4000D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Selector.hpp;
+			path = ../../include/SFML/Network/Selector.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4010D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = Selector.inl;
+			path = ../../include/SFML/Network/Selector.inl;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4020D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SocketHelper.hpp;
+			path = ../../include/SFML/Network/SocketHelper.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4030D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Sockets.hpp;
+			path = ../../include/SFML/Network/Sockets.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4040D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SocketTCP.hpp;
+			path = ../../include/SFML/Network/SocketTCP.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4050D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SocketUDP.hpp;
+			path = ../../include/SFML/Network/SocketUDP.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4060D8BF9E2002236B4 = {
+			children = (
+				A093E4070D8BF9E2002236B4,
+			);
+			isa = PBXGroup;
+			name = Unix;
+			path = ../../include/SFML/Network/Unix;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4070D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SocketHelper.hpp;
+			path = ../../include/SFML/Network/Unix/SocketHelper.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E40A0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Network.hpp;
+			path = ../../include/SFML/Network.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E40B0D8BF9E2002236B4 = {
+			children = (
+				A093E40C0D8BF9E2002236B4,
+				A093E40D0D8BF9E2002236B4,
+				A093E40E0D8BF9E2002236B4,
+				A093E40F0D8BF9E2002236B4,
+				A093E4100D8BF9E3002236B4,
+				A093E4110D8BF9E3002236B4,
+				A093E4120D8BF9E3002236B4,
+				A093E4130D8BF9E3002236B4,
+				A093E4160D8BF9E3002236B4,
+				A093E4170D8BF9E3002236B4,
+				A093E4180D8BF9E3002236B4,
+				A093E4190D8BF9E3002236B4,
+			);
+			isa = PBXGroup;
+			name = System;
+			path = ../../include/SFML/System;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E40C0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Clock.hpp;
+			path = ../../include/SFML/System/Clock.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E40D0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Lock.hpp;
+			path = ../../include/SFML/System/Lock.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E40E0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Mutex.hpp;
+			path = ../../include/SFML/System/Mutex.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E40F0D8BF9E2002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = NonCopyable.hpp;
+			path = ../../include/SFML/System/NonCopyable.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4100D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Randomizer.hpp;
+			path = ../../include/SFML/System/Randomizer.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4110D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Sleep.hpp;
+			path = ../../include/SFML/System/Sleep.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4120D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Thread.hpp;
+			path = ../../include/SFML/System/Thread.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4130D8BF9E3002236B4 = {
+			children = (
+				A093E4140D8BF9E3002236B4,
+				A093E4150D8BF9E3002236B4,
+			);
+			isa = PBXGroup;
+			name = Unix;
+			path = ../../include/SFML/System/Unix;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4140D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Mutex.hpp;
+			path = ../../include/SFML/System/Unix/Mutex.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4150D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Thread.hpp;
+			path = ../../include/SFML/System/Unix/Thread.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4160D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Vector2.hpp;
+			path = ../../include/SFML/System/Vector2.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4170D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = Vector2.inl;
+			path = ../../include/SFML/System/Vector2.inl;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4180D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Vector3.hpp;
+			path = ../../include/SFML/System/Vector3.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4190D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = Vector3.inl;
+			path = ../../include/SFML/System/Vector3.inl;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E41D0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = System.hpp;
+			path = ../../include/SFML/System.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E41E0D8BF9E3002236B4 = {
+			children = (
+				A0BA42040DDF0D1B00039094,
+				A093E41F0D8BF9E3002236B4,
+				A093E4220D8BF9E3002236B4,
+				A093E4280D8BF9E3002236B4,
+				A093E42B0D8BF9E3002236B4,
+				A093E42C0D8BF9E3002236B4,
+				A093E42D0D8BF9E3002236B4,
+				A093E42E0D8BF9E3002236B4,
+				A0BA420D0DDF0D5D00039094,
+			);
+			isa = PBXGroup;
+			name = Window;
+			path = ../../include/SFML/Window;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E41F0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Event.hpp;
+			path = ../../include/SFML/Window/Event.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4220D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Input.hpp;
+			path = ../../include/SFML/Window/Input.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4280D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = VideoMode.hpp;
+			path = ../../include/SFML/Window/VideoMode.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E42B0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Window.hpp;
+			path = ../../include/SFML/Window/Window.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E42C0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowHandle.hpp;
+			path = ../../include/SFML/Window/WindowHandle.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E42D0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowListener.hpp;
+			path = ../../include/SFML/Window/WindowListener.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E42E0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowStyle.hpp;
+			path = ../../include/SFML/Window/WindowStyle.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E42F0D8BF9E3002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Window.hpp;
+			path = ../../include/SFML/Window.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E4300D8BF9E3002236B4 = {
+			fileRef = A093E3E40D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4310D8BF9E3002236B4 = {
+			fileRef = A093E3E50D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4320D8BF9E3002236B4 = {
+			fileRef = A093E3E60D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4330D8BF9E3002236B4 = {
+			fileRef = A093E3E70D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4340D8BF9E3002236B4 = {
+			fileRef = A093E3E80D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4350D8BF9E3002236B4 = {
+			fileRef = A093E3E90D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4360D8BF9E3002236B4 = {
+			fileRef = A093E3EA0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4370D8BF9E3002236B4 = {
+			fileRef = A093E3EB0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4380D8BF9E3002236B4 = {
+			fileRef = A093E3EC0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4390D8BF9E3002236B4 = {
+			fileRef = A093E3ED0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E43A0D8BF9E3002236B4 = {
+			fileRef = A093E3EF0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E43B0D8BF9E3002236B4 = {
+			fileRef = A093E3F00D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E43C0D8BF9E3002236B4 = {
+			fileRef = A093E3F10D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E43D0D8BF9E3002236B4 = {
+			fileRef = A093E3F20D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E43E0D8BF9E3002236B4 = {
+			fileRef = A093E3F30D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E43F0D8BF9E3002236B4 = {
+			fileRef = A093E3F40D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4410D8BF9E3002236B4 = {
+			fileRef = A093E3F60D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4420D8BF9E3002236B4 = {
+			fileRef = A093E3F70D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4430D8BF9E3002236B4 = {
+			fileRef = A093E3F80D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4440D8BF9E3002236B4 = {
+			fileRef = A093E3F90D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4450D8BF9E3002236B4 = {
+			fileRef = A093E3FA0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4460D8BF9E3002236B4 = {
+			fileRef = A093E3FB0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4470D8BF9E3002236B4 = {
+			fileRef = A093E3FC0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4480D8BF9E3002236B4 = {
+			fileRef = A093E3FE0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4490D8BF9E3002236B4 = {
+			fileRef = A093E3FF0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E44A0D8BF9E3002236B4 = {
+			fileRef = A093E4000D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E44C0D8BF9E3002236B4 = {
+			fileRef = A093E4020D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E44D0D8BF9E3002236B4 = {
+			fileRef = A093E4030D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E44E0D8BF9E3002236B4 = {
+			fileRef = A093E4040D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E44F0D8BF9E3002236B4 = {
+			fileRef = A093E4050D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4500D8BF9E3002236B4 = {
+			fileRef = A093E4070D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4520D8BF9E3002236B4 = {
+			fileRef = A093E40A0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4530D8BF9E3002236B4 = {
+			fileRef = A093E40C0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4540D8BF9E3002236B4 = {
+			fileRef = A093E40D0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4550D8BF9E3002236B4 = {
+			fileRef = A093E40E0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4560D8BF9E3002236B4 = {
+			fileRef = A093E40F0D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4570D8BF9E3002236B4 = {
+			fileRef = A093E4100D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4580D8BF9E3002236B4 = {
+			fileRef = A093E4110D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4590D8BF9E3002236B4 = {
+			fileRef = A093E4120D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E45A0D8BF9E3002236B4 = {
+			fileRef = A093E4140D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E45B0D8BF9E3002236B4 = {
+			fileRef = A093E4150D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E45C0D8BF9E3002236B4 = {
+			fileRef = A093E4160D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E45E0D8BF9E3002236B4 = {
+			fileRef = A093E4180D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4620D8BF9E3002236B4 = {
+			fileRef = A093E41D0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4630D8BF9E3002236B4 = {
+			fileRef = A093E41F0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4650D8BF9E3002236B4 = {
+			fileRef = A093E4220D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E4690D8BF9E3002236B4 = {
+			fileRef = A093E4280D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E46B0D8BF9E3002236B4 = {
+			fileRef = A093E42B0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E46C0D8BF9E3002236B4 = {
+			fileRef = A093E42C0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E46D0D8BF9E3002236B4 = {
+			fileRef = A093E42D0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E46E0D8BF9E3002236B4 = {
+			fileRef = A093E42E0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E46F0D8BF9E3002236B4 = {
+			fileRef = A093E42F0D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+				);
+			};
+		};
+		A093E4FE0D8BFD13002236B4 = {
+			children = (
+				A093E5410D8BFE29002236B4,
+				A093E5140D8BFDC9002236B4,
+				A093E5090D8BFDC9002236B4,
+				A093E50E0D8BFDC9002236B4,
+				A093E50A0D8BFDC9002236B4,
+				A093E50B0D8BFDC9002236B4,
+				A093E5130D8BFDC9002236B4,
+				A093E5150D8BFDC9002236B4,
+				A093E50D0D8BFDC9002236B4,
+				A093E50F0D8BFDC9002236B4,
+				A093E5110D8BFDC9002236B4,
+				A093E5160D8BFDC9002236B4,
+				A093E5100D8BFDC9002236B4,
+				A093E5080D8BFDC9002236B4,
+				A093E50C0D8BFDC9002236B4,
+				A093E5120D8BFDC9002236B4,
+				A093E5170D8BFDC9002236B4,
+				A093E5180D8BFDC9002236B4,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5080D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundStream.cpp;
+			path = ../../src/SFML/Audio/SoundStream.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5090D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = AudioDevice.hpp;
+			path = ../../src/SFML/Audio/AudioDevice.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E50A0D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundBuffer.cpp;
+			path = ../../src/SFML/Audio/SoundBuffer.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E50B0D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundFile.hpp;
+			path = ../../src/SFML/Audio/SoundFile.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E50C0D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Listener.cpp;
+			path = ../../src/SFML/Audio/Listener.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E50D0D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundFileOgg.cpp;
+			path = ../../src/SFML/Audio/SoundFileOgg.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E50E0D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = AudioDevice.cpp;
+			path = ../../src/SFML/Audio/AudioDevice.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E50F0D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Sound.cpp;
+			path = ../../src/SFML/Audio/Sound.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5100D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundRecorder.cpp;
+			path = ../../src/SFML/Audio/SoundRecorder.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5110D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundFileDefault.hpp;
+			path = ../../src/SFML/Audio/SoundFileDefault.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5120D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = AudioResource.cpp;
+			path = ../../src/SFML/Audio/AudioResource.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5130D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundFile.cpp;
+			path = ../../src/SFML/Audio/SoundFile.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5140D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = OpenAL.hpp;
+			path = ../../src/SFML/Audio/OpenAL.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5150D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SoundFileOgg.hpp;
+			path = ../../src/SFML/Audio/SoundFileOgg.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5160D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundFileDefault.cpp;
+			path = ../../src/SFML/Audio/SoundFileDefault.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5170D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Music.cpp;
+			path = ../../src/SFML/Audio/Music.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5180D8BFDC9002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SoundBufferRecorder.cpp;
+			path = ../../src/SFML/Audio/SoundBufferRecorder.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5190D8BFDC9002236B4 = {
+			fileRef = A093E5080D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E51A0D8BFDC9002236B4 = {
+			fileRef = A093E5090D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E51B0D8BFDC9002236B4 = {
+			fileRef = A093E50A0D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E51C0D8BFDC9002236B4 = {
+			fileRef = A093E50B0D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E51D0D8BFDC9002236B4 = {
+			fileRef = A093E50C0D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E51E0D8BFDC9002236B4 = {
+			fileRef = A093E50D0D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E51F0D8BFDC9002236B4 = {
+			fileRef = A093E50E0D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5200D8BFDC9002236B4 = {
+			fileRef = A093E50F0D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5210D8BFDC9002236B4 = {
+			fileRef = A093E5100D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5220D8BFDC9002236B4 = {
+			fileRef = A093E5110D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5230D8BFDC9002236B4 = {
+			fileRef = A093E5120D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5240D8BFDC9002236B4 = {
+			fileRef = A093E5130D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5250D8BFDC9002236B4 = {
+			fileRef = A093E5140D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5260D8BFDC9002236B4 = {
+			fileRef = A093E5150D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5270D8BFDC9002236B4 = {
+			fileRef = A093E5160D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5280D8BFDC9002236B4 = {
+			fileRef = A093E5170D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5290D8BFDC9002236B4 = {
+			fileRef = A093E5180D8BFDC9002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5410D8BFE29002236B4 = {
+			children = (
+				A093E5420D8BFE29002236B4,
+				A093E5430D8BFE29002236B4,
+			);
+			isa = PBXGroup;
+			name = stb_vorbis;
+			path = ../../src/SFML/Audio/stb_vorbis;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5420D8BFE29002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = stb_vorbis.c;
+			path = ../../src/SFML/Audio/stb_vorbis/stb_vorbis.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5430D8BFE29002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = stb_vorbis.h;
+			path = ../../src/SFML/Audio/stb_vorbis/stb_vorbis.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5440D8BFE29002236B4 = {
+			fileRef = A093E5420D8BFE29002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5450D8BFE29002236B4 = {
+			fileRef = A093E5430D8BFE29002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5480D8BFEAE002236B4 = {
+			fileRef = A093E37F0D8BF87A002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5490D8BFEB9002236B4 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E37E0D8BF87A002236B4;
+			remoteInfo = "sfml-system";
+		};
+		A093E54A0D8BFEB9002236B4 = {
+			isa = PBXTargetDependency;
+			target = A093E37E0D8BF87A002236B4;
+			targetProxy = A093E5490D8BFEB9002236B4;
+		};
+		A093E5580D8BFF07002236B4 = {
+			children = (
+				A0BA42540DDF18B700039094,
+				A093E56E0D8BFF33002236B4,
+				A093E57B0D8BFF33002236B4,
+				A093E5790D8BFF33002236B4,
+				A093E5730D8BFF33002236B4,
+				A093E5740D8BFF33002236B4,
+				A093E5710D8BFF33002236B4,
+				A093E5720D8BFF33002236B4,
+				A093E5750D8BFF33002236B4,
+				A093E5760D8BFF33002236B4,
+				A093E5770D8BFF33002236B4,
+				A093E5780D8BFF33002236B4,
+				A0BA424A0DDF189200039094,
+				A0BA42430DDF186600039094,
+				A093E57A0D8BFF33002236B4,
+				A093E57C0D8BFF33002236B4,
+				A093E57D0D8BFF33002236B4,
+				A093E57F0D8BFF33002236B4,
+				A093E5800D8BFF33002236B4,
+				A0BA42670DDF18F100039094,
+				A093E56A0D8BFF21002236B4,
+				A093E5610D8BFF15002236B4,
+				A093E55E0D8BFF11002236B4,
+				A093E55B0D8BFF0E002236B4,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E55B0D8BFF0E002236B4 = {
+			children = (
+				A093E6640D8BFFE4002236B4,
+				A093E6650D8BFFE4002236B4,
+				A093E6660D8BFFE4002236B4,
+				A093E6670D8BFFE4002236B4,
+				A093E6680D8BFFE4002236B4,
+				A093E6690D8BFFE4002236B4,
+				A093E66A0D8BFFE4002236B4,
+				A093E66B0D8BFFE5002236B4,
+				A093E66C0D8BFFE5002236B4,
+				A093E66D0D8BFFE5002236B4,
+				A093E66E0D8BFFE5002236B4,
+				A093E66F0D8BFFE5002236B4,
+				A093E6700D8BFFE5002236B4,
+				A093E6710D8BFFE5002236B4,
+				A093E6720D8BFFE5002236B4,
+				A093E6730D8BFFE5002236B4,
+				A093E6740D8BFFE5002236B4,
+				A093E6750D8BFFE5002236B4,
+				A093E6760D8BFFE5002236B4,
+			);
+			isa = PBXGroup;
+			name = libpng;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E55E0D8BFF11002236B4 = {
+			children = (
+				A093E5EA0D8BFFD5002236B4,
+				A093E5EB0D8BFFD5002236B4,
+				A093E5EC0D8BFFD5002236B4,
+				A093E5ED0D8BFFD5002236B4,
+				A093E5EE0D8BFFD5002236B4,
+				A093E5EF0D8BFFD5002236B4,
+				A093E5F00D8BFFD5002236B4,
+				A093E5F10D8BFFD5002236B4,
+				A093E5F20D8BFFD5002236B4,
+				A093E5F30D8BFFD5002236B4,
+				A093E5F40D8BFFD5002236B4,
+				A093E5F50D8BFFD5002236B4,
+				A093E5F60D8BFFD5002236B4,
+				A093E5F70D8BFFD5002236B4,
+				A093E5F80D8BFFD5002236B4,
+				A093E5F90D8BFFD5002236B4,
+				A093E5FA0D8BFFD5002236B4,
+				A093E5FB0D8BFFD5002236B4,
+				A093E5FC0D8BFFD5002236B4,
+				A093E5FD0D8BFFD5002236B4,
+				A093E5FE0D8BFFD5002236B4,
+				A093E5FF0D8BFFD5002236B4,
+				A093E6000D8BFFD5002236B4,
+				A093E6010D8BFFD5002236B4,
+				A093E6020D8BFFD5002236B4,
+				A093E6030D8BFFD5002236B4,
+				A093E6040D8BFFD5002236B4,
+				A093E6050D8BFFD5002236B4,
+				A093E6060D8BFFD5002236B4,
+				A093E6070D8BFFD5002236B4,
+				A093E6080D8BFFD5002236B4,
+				A093E6090D8BFFD5002236B4,
+				A093E60A0D8BFFD5002236B4,
+				A093E60B0D8BFFD5002236B4,
+				A093E60C0D8BFFD5002236B4,
+				A093E60D0D8BFFD5002236B4,
+				A093E60E0D8BFFD5002236B4,
+				A093E60F0D8BFFD5002236B4,
+				A093E6100D8BFFD5002236B4,
+				A093E6110D8BFFD5002236B4,
+				A093E6120D8BFFD5002236B4,
+				A093E6130D8BFFD5002236B4,
+				A093E6140D8BFFD5002236B4,
+				A093E6150D8BFFD5002236B4,
+				A093E6160D8BFFD5002236B4,
+				A093E6170D8BFFD5002236B4,
+				A093E6180D8BFFD5002236B4,
+				A093E6190D8BFFD5002236B4,
+				A093E61A0D8BFFD5002236B4,
+				A093E61B0D8BFFD5002236B4,
+				A093E61C0D8BFFD5002236B4,
+				A093E61D0D8BFFD5002236B4,
+				A093E61E0D8BFFD5002236B4,
+				A093E61F0D8BFFD5002236B4,
+				A093E6200D8BFFD5002236B4,
+				A093E6210D8BFFD5002236B4,
+				A093E6220D8BFFD5002236B4,
+				A093E6230D8BFFD5002236B4,
+			);
+			isa = PBXGroup;
+			name = libjpeg;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5610D8BFF15002236B4 = {
+			children = (
+				A093E5BC0D8BFFC6002236B4,
+				A093E5BD0D8BFFC6002236B4,
+				A093E5BE0D8BFFC6002236B4,
+				A093E5BF0D8BFFC6002236B4,
+				A093E5C00D8BFFC6002236B4,
+				A093E5C10D8BFFC6002236B4,
+				A093E5C20D8BFFC6002236B4,
+				A093E5C30D8BFFC6002236B4,
+				A093E5C40D8BFFC6002236B4,
+				A093E5C50D8BFFC6002236B4,
+				A093E5C60D8BFFC6002236B4,
+				A093E5C70D8BFFC6002236B4,
+				A093E5C80D8BFFC6002236B4,
+				A093E5C90D8BFFC6002236B4,
+				A093E5CA0D8BFFC6002236B4,
+				A093E5CB0D8BFFC6002236B4,
+				A093E5CC0D8BFFC6002236B4,
+				A093E5CD0D8BFFC6002236B4,
+				A093E5CE0D8BFFC6002236B4,
+				A093E5CF0D8BFFC6002236B4,
+			);
+			isa = PBXGroup;
+			name = zlib;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E56A0D8BFF21002236B4 = {
+			children = (
+				A093E5A60D8BFFBA002236B4,
+				A093E5A70D8BFFBA002236B4,
+				A093E5A80D8BFFBA002236B4,
+				A093E5A90D8BFFBA002236B4,
+				A093E5AA0D8BFFBA002236B4,
+				A093E5AB0D8BFFBA002236B4,
+				A093E5AC0D8BFFBA002236B4,
+				A093E5AD0D8BFFBA002236B4,
+			);
+			isa = PBXGroup;
+			name = SOIL;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E56E0D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = ImageLoader.hpp;
+			path = ../../src/SFML/Graphics/ImageLoader.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5710D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = String.cpp;
+			path = ../../src/SFML/Graphics/String.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5720D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Color.cpp;
+			path = ../../src/SFML/Graphics/Color.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5730D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = FontLoader.cpp;
+			path = ../../src/SFML/Graphics/FontLoader.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5740D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Arial.hpp;
+			path = ../../src/SFML/Graphics/Arial.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5750D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = PostFX.cpp;
+			path = ../../src/SFML/Graphics/PostFX.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5760D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Image.cpp;
+			path = ../../src/SFML/Graphics/Image.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5770D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = VideoResource.cpp;
+			path = ../../src/SFML/Graphics/VideoResource.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5780D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Drawable.cpp;
+			path = ../../src/SFML/Graphics/Drawable.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5790D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = FontLoader.hpp;
+			path = ../../src/SFML/Graphics/FontLoader.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E57A0D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = RenderWindow.cpp;
+			path = ../../src/SFML/Graphics/RenderWindow.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E57B0D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ImageLoader.cpp;
+			path = ../../src/SFML/Graphics/ImageLoader.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E57C0D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = View.cpp;
+			path = ../../src/SFML/Graphics/View.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E57D0D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Font.cpp;
+			path = ../../src/SFML/Graphics/Font.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E57F0D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Sprite.cpp;
+			path = ../../src/SFML/Graphics/Sprite.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5800D8BFF33002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Shape.cpp;
+			path = ../../src/SFML/Graphics/Shape.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5810D8BFF33002236B4 = {
+			fileRef = A093E56E0D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5840D8BFF33002236B4 = {
+			fileRef = A093E5710D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5850D8BFF33002236B4 = {
+			fileRef = A093E5720D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5860D8BFF33002236B4 = {
+			fileRef = A093E5730D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5870D8BFF33002236B4 = {
+			fileRef = A093E5740D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5880D8BFF33002236B4 = {
+			fileRef = A093E5750D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5890D8BFF33002236B4 = {
+			fileRef = A093E5760D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E58A0D8BFF33002236B4 = {
+			fileRef = A093E5770D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E58B0D8BFF33002236B4 = {
+			fileRef = A093E5780D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E58C0D8BFF33002236B4 = {
+			fileRef = A093E5790D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E58D0D8BFF33002236B4 = {
+			fileRef = A093E57A0D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E58E0D8BFF33002236B4 = {
+			fileRef = A093E57B0D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E58F0D8BFF33002236B4 = {
+			fileRef = A093E57C0D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5900D8BFF33002236B4 = {
+			fileRef = A093E57D0D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5920D8BFF33002236B4 = {
+			fileRef = A093E57F0D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5930D8BFF33002236B4 = {
+			fileRef = A093E5800D8BFF33002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5A60D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = SOIL.h;
+			path = ../../src/SFML/Graphics/SOIL/SOIL.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5A70D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = SOIL.c;
+			path = ../../src/SFML/Graphics/SOIL/SOIL.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5A80D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = image_DXT.h;
+			path = ../../src/SFML/Graphics/SOIL/image_DXT.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5A90D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = stb_image_aug.c;
+			path = ../../src/SFML/Graphics/SOIL/stb_image_aug.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5AA0D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = stbi_DDS_aug_c.h;
+			path = ../../src/SFML/Graphics/SOIL/stbi_DDS_aug_c.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5AB0D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = stb_image_aug.h;
+			path = ../../src/SFML/Graphics/SOIL/stb_image_aug.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5AC0D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = stbi_DDS_aug.h;
+			path = ../../src/SFML/Graphics/SOIL/stbi_DDS_aug.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5AD0D8BFFBA002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = image_DXT.c;
+			path = ../../src/SFML/Graphics/SOIL/image_DXT.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5AE0D8BFFBA002236B4 = {
+			fileRef = A093E5A60D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5AF0D8BFFBA002236B4 = {
+			fileRef = A093E5A70D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5B00D8BFFBA002236B4 = {
+			fileRef = A093E5A80D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5B10D8BFFBA002236B4 = {
+			fileRef = A093E5A90D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5B20D8BFFBA002236B4 = {
+			fileRef = A093E5AA0D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5B30D8BFFBA002236B4 = {
+			fileRef = A093E5AB0D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5B40D8BFFBA002236B4 = {
+			fileRef = A093E5AC0D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5B50D8BFFBA002236B4 = {
+			fileRef = A093E5AD0D8BFFBA002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5BC0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = inftrees.c;
+			path = ../../src/SFML/Graphics/zlib/inftrees.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5BD0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = inffast.c;
+			path = ../../src/SFML/Graphics/zlib/inffast.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5BE0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = adler32.c;
+			path = ../../src/SFML/Graphics/zlib/adler32.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5BF0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = zutil.c;
+			path = ../../src/SFML/Graphics/zlib/zutil.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C00D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = inffixed.h;
+			path = ../../src/SFML/Graphics/zlib/inffixed.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C10D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = crc32.h;
+			path = ../../src/SFML/Graphics/zlib/crc32.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C20D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = uncompr.c;
+			path = ../../src/SFML/Graphics/zlib/uncompr.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C30D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = inftrees.h;
+			path = ../../src/SFML/Graphics/zlib/inftrees.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C40D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = inffast.h;
+			path = ../../src/SFML/Graphics/zlib/inffast.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C50D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = zutil.h;
+			path = ../../src/SFML/Graphics/zlib/zutil.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C60D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = inflate.c;
+			path = ../../src/SFML/Graphics/zlib/inflate.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C70D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = deflate.c;
+			path = ../../src/SFML/Graphics/zlib/deflate.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C80D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = zconf.h;
+			path = ../../src/SFML/Graphics/zlib/zconf.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5C90D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = compress.c;
+			path = ../../src/SFML/Graphics/zlib/compress.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5CA0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = trees.c;
+			path = ../../src/SFML/Graphics/zlib/trees.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5CB0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = inflate.h;
+			path = ../../src/SFML/Graphics/zlib/inflate.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5CC0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = deflate.h;
+			path = ../../src/SFML/Graphics/zlib/deflate.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5CD0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = zlib.h;
+			path = ../../src/SFML/Graphics/zlib/zlib.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5CE0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = crc32.c;
+			path = ../../src/SFML/Graphics/zlib/crc32.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5CF0D8BFFC6002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = trees.h;
+			path = ../../src/SFML/Graphics/zlib/trees.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5D00D8BFFC6002236B4 = {
+			fileRef = A093E5BC0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D10D8BFFC6002236B4 = {
+			fileRef = A093E5BD0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D20D8BFFC6002236B4 = {
+			fileRef = A093E5BE0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D30D8BFFC6002236B4 = {
+			fileRef = A093E5BF0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D40D8BFFC6002236B4 = {
+			fileRef = A093E5C00D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D50D8BFFC6002236B4 = {
+			fileRef = A093E5C10D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D60D8BFFC6002236B4 = {
+			fileRef = A093E5C20D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D70D8BFFC6002236B4 = {
+			fileRef = A093E5C30D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D80D8BFFC6002236B4 = {
+			fileRef = A093E5C40D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5D90D8BFFC6002236B4 = {
+			fileRef = A093E5C50D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5DA0D8BFFC6002236B4 = {
+			fileRef = A093E5C60D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5DB0D8BFFC6002236B4 = {
+			fileRef = A093E5C70D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5DC0D8BFFC6002236B4 = {
+			fileRef = A093E5C80D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5DD0D8BFFC6002236B4 = {
+			fileRef = A093E5C90D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5DE0D8BFFC6002236B4 = {
+			fileRef = A093E5CA0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5DF0D8BFFC6002236B4 = {
+			fileRef = A093E5CB0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5E00D8BFFC6002236B4 = {
+			fileRef = A093E5CC0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5E10D8BFFC6002236B4 = {
+			fileRef = A093E5CD0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5E20D8BFFC6002236B4 = {
+			fileRef = A093E5CE0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5E30D8BFFC6002236B4 = {
+			fileRef = A093E5CF0D8BFFC6002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E5EA0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdapistd.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdapistd.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5EB0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcapimin.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcapimin.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5EC0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdinput.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdinput.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5ED0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdtrans.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdtrans.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5EE0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jidctflt.c;
+			path = ../../src/SFML/Graphics/libjpeg/jidctflt.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5EF0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcinit.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcinit.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F00D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jconfig.h;
+			path = ../../src/SFML/Graphics/libjpeg/jconfig.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F10D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jmemnobs.c;
+			path = ../../src/SFML/Graphics/libjpeg/jmemnobs.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F20D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdatasrc.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdatasrc.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F30D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jccoefct.c;
+			path = ../../src/SFML/Graphics/libjpeg/jccoefct.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F40D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jquant2.c;
+			path = ../../src/SFML/Graphics/libjpeg/jquant2.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F50D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdsample.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdsample.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F60D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcmarker.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcmarker.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F70D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcphuff.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcphuff.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F80D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdmerge.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdmerge.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5F90D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdcolor.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdcolor.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5FA0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcdctmgr.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcdctmgr.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5FB0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jfdctint.c;
+			path = ../../src/SFML/Graphics/libjpeg/jfdctint.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5FC0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jmemmgr.c;
+			path = ../../src/SFML/Graphics/libjpeg/jmemmgr.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5FD0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jquant1.c;
+			path = ../../src/SFML/Graphics/libjpeg/jquant1.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5FE0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcsample.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcsample.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E5FF0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdpostct.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdpostct.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6000D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jddctmgr.c;
+			path = ../../src/SFML/Graphics/libjpeg/jddctmgr.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6010D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jchuff.h;
+			path = ../../src/SFML/Graphics/libjpeg/jchuff.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6020D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jfdctfst.c;
+			path = ../../src/SFML/Graphics/libjpeg/jfdctfst.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6030D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jinclude.h;
+			path = ../../src/SFML/Graphics/libjpeg/jinclude.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6040D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdapimin.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdapimin.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6050D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jdhuff.h;
+			path = ../../src/SFML/Graphics/libjpeg/jdhuff.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6060D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jpeglib.h;
+			path = ../../src/SFML/Graphics/libjpeg/jpeglib.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6070D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jfdctflt.c;
+			path = ../../src/SFML/Graphics/libjpeg/jfdctflt.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6080D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcomapi.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcomapi.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6090D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdatadst.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdatadst.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E60A0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcapistd.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcapistd.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E60B0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdmainct.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdmainct.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E60C0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jidctred.c;
+			path = ../../src/SFML/Graphics/libjpeg/jidctred.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E60D0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jpegint.h;
+			path = ../../src/SFML/Graphics/libjpeg/jpegint.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E60E0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcmainct.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcmainct.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E60F0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcparam.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcparam.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6100D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdmaster.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdmaster.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6110D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdcoefct.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdcoefct.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6120D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jccolor.c;
+			path = ../../src/SFML/Graphics/libjpeg/jccolor.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6130D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jerror.h;
+			path = ../../src/SFML/Graphics/libjpeg/jerror.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6140D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jidctint.c;
+			path = ../../src/SFML/Graphics/libjpeg/jidctint.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6150D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcprepct.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcprepct.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6160D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdphuff.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdphuff.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6170D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = cderror.h;
+			path = ../../src/SFML/Graphics/libjpeg/cderror.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6180D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jchuff.c;
+			path = ../../src/SFML/Graphics/libjpeg/jchuff.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6190D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jdct.h;
+			path = ../../src/SFML/Graphics/libjpeg/jdct.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E61A0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jmorecfg.h;
+			path = ../../src/SFML/Graphics/libjpeg/jmorecfg.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E61B0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jversion.h;
+			path = ../../src/SFML/Graphics/libjpeg/jversion.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E61C0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdmarker.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdmarker.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E61D0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jerror.c;
+			path = ../../src/SFML/Graphics/libjpeg/jerror.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E61E0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jctrans.c;
+			path = ../../src/SFML/Graphics/libjpeg/jctrans.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E61F0D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jdhuff.c;
+			path = ../../src/SFML/Graphics/libjpeg/jdhuff.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6200D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jidctfst.c;
+			path = ../../src/SFML/Graphics/libjpeg/jidctfst.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6210D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = jmemsys.h;
+			path = ../../src/SFML/Graphics/libjpeg/jmemsys.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6220D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jcmaster.c;
+			path = ../../src/SFML/Graphics/libjpeg/jcmaster.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6230D8BFFD5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = jutils.c;
+			path = ../../src/SFML/Graphics/libjpeg/jutils.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6240D8BFFD5002236B4 = {
+			fileRef = A093E5EA0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6250D8BFFD5002236B4 = {
+			fileRef = A093E5EB0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6260D8BFFD5002236B4 = {
+			fileRef = A093E5EC0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6270D8BFFD5002236B4 = {
+			fileRef = A093E5ED0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6280D8BFFD5002236B4 = {
+			fileRef = A093E5EE0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6290D8BFFD5002236B4 = {
+			fileRef = A093E5EF0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E62A0D8BFFD5002236B4 = {
+			fileRef = A093E5F00D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E62B0D8BFFD5002236B4 = {
+			fileRef = A093E5F10D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E62C0D8BFFD5002236B4 = {
+			fileRef = A093E5F20D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E62D0D8BFFD5002236B4 = {
+			fileRef = A093E5F30D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E62E0D8BFFD5002236B4 = {
+			fileRef = A093E5F40D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E62F0D8BFFD5002236B4 = {
+			fileRef = A093E5F50D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6300D8BFFD5002236B4 = {
+			fileRef = A093E5F60D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6310D8BFFD5002236B4 = {
+			fileRef = A093E5F70D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6320D8BFFD5002236B4 = {
+			fileRef = A093E5F80D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6330D8BFFD5002236B4 = {
+			fileRef = A093E5F90D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6340D8BFFD5002236B4 = {
+			fileRef = A093E5FA0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6350D8BFFD5002236B4 = {
+			fileRef = A093E5FB0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6360D8BFFD5002236B4 = {
+			fileRef = A093E5FC0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6370D8BFFD5002236B4 = {
+			fileRef = A093E5FD0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6380D8BFFD5002236B4 = {
+			fileRef = A093E5FE0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6390D8BFFD5002236B4 = {
+			fileRef = A093E5FF0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E63A0D8BFFD5002236B4 = {
+			fileRef = A093E6000D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E63B0D8BFFD5002236B4 = {
+			fileRef = A093E6010D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E63C0D8BFFD5002236B4 = {
+			fileRef = A093E6020D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E63D0D8BFFD5002236B4 = {
+			fileRef = A093E6030D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E63E0D8BFFD5002236B4 = {
+			fileRef = A093E6040D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E63F0D8BFFD5002236B4 = {
+			fileRef = A093E6050D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6400D8BFFD5002236B4 = {
+			fileRef = A093E6060D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6410D8BFFD5002236B4 = {
+			fileRef = A093E6070D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6420D8BFFD5002236B4 = {
+			fileRef = A093E6080D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6430D8BFFD5002236B4 = {
+			fileRef = A093E6090D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6440D8BFFD5002236B4 = {
+			fileRef = A093E60A0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6450D8BFFD5002236B4 = {
+			fileRef = A093E60B0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6460D8BFFD5002236B4 = {
+			fileRef = A093E60C0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6470D8BFFD5002236B4 = {
+			fileRef = A093E60D0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6480D8BFFD5002236B4 = {
+			fileRef = A093E60E0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6490D8BFFD5002236B4 = {
+			fileRef = A093E60F0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E64A0D8BFFD5002236B4 = {
+			fileRef = A093E6100D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E64B0D8BFFD5002236B4 = {
+			fileRef = A093E6110D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E64C0D8BFFD5002236B4 = {
+			fileRef = A093E6120D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E64D0D8BFFD5002236B4 = {
+			fileRef = A093E6130D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E64E0D8BFFD5002236B4 = {
+			fileRef = A093E6140D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E64F0D8BFFD5002236B4 = {
+			fileRef = A093E6150D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6500D8BFFD5002236B4 = {
+			fileRef = A093E6160D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6510D8BFFD5002236B4 = {
+			fileRef = A093E6170D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6520D8BFFD5002236B4 = {
+			fileRef = A093E6180D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6530D8BFFD5002236B4 = {
+			fileRef = A093E6190D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6540D8BFFD5002236B4 = {
+			fileRef = A093E61A0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6550D8BFFD5002236B4 = {
+			fileRef = A093E61B0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6560D8BFFD5002236B4 = {
+			fileRef = A093E61C0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6570D8BFFD5002236B4 = {
+			fileRef = A093E61D0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6580D8BFFD5002236B4 = {
+			fileRef = A093E61E0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6590D8BFFD5002236B4 = {
+			fileRef = A093E61F0D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E65A0D8BFFD5002236B4 = {
+			fileRef = A093E6200D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E65B0D8BFFD5002236B4 = {
+			fileRef = A093E6210D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E65C0D8BFFD5002236B4 = {
+			fileRef = A093E6220D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E65D0D8BFFD5002236B4 = {
+			fileRef = A093E6230D8BFFD5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6640D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngread.c;
+			path = ../../src/SFML/Graphics/libpng/pngread.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6650D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngrio.c;
+			path = ../../src/SFML/Graphics/libpng/pngrio.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6660D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngwrite.c;
+			path = ../../src/SFML/Graphics/libpng/pngwrite.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6670D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngerror.c;
+			path = ../../src/SFML/Graphics/libpng/pngerror.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6680D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngtrans.c;
+			path = ../../src/SFML/Graphics/libpng/pngtrans.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6690D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pnggccrd.c;
+			path = ../../src/SFML/Graphics/libpng/pnggccrd.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E66A0D8BFFE4002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = png.h;
+			path = ../../src/SFML/Graphics/libpng/png.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E66B0D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngrtran.c;
+			path = ../../src/SFML/Graphics/libpng/pngrtran.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E66C0D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngwtran.c;
+			path = ../../src/SFML/Graphics/libpng/pngwtran.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E66D0D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngmem.c;
+			path = ../../src/SFML/Graphics/libpng/pngmem.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E66E0D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngvcrd.c;
+			path = ../../src/SFML/Graphics/libpng/pngvcrd.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E66F0D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngget.c;
+			path = ../../src/SFML/Graphics/libpng/pngget.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6700D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngrutil.c;
+			path = ../../src/SFML/Graphics/libpng/pngrutil.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6710D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngwutil.c;
+			path = ../../src/SFML/Graphics/libpng/pngwutil.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6720D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = png.c;
+			path = ../../src/SFML/Graphics/libpng/png.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6730D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngpread.c;
+			path = ../../src/SFML/Graphics/libpng/pngpread.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6740D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngwio.c;
+			path = ../../src/SFML/Graphics/libpng/pngwio.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6750D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = pngconf.h;
+			path = ../../src/SFML/Graphics/libpng/pngconf.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6760D8BFFE5002236B4 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = pngset.c;
+			path = ../../src/SFML/Graphics/libpng/pngset.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A093E6770D8BFFE5002236B4 = {
+			fileRef = A093E6640D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6780D8BFFE5002236B4 = {
+			fileRef = A093E6650D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6790D8BFFE5002236B4 = {
+			fileRef = A093E6660D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E67A0D8BFFE5002236B4 = {
+			fileRef = A093E6670D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E67B0D8BFFE5002236B4 = {
+			fileRef = A093E6680D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E67C0D8BFFE5002236B4 = {
+			fileRef = A093E6690D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E67D0D8BFFE5002236B4 = {
+			fileRef = A093E66A0D8BFFE4002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E67E0D8BFFE5002236B4 = {
+			fileRef = A093E66B0D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E67F0D8BFFE5002236B4 = {
+			fileRef = A093E66C0D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6800D8BFFE5002236B4 = {
+			fileRef = A093E66D0D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6810D8BFFE5002236B4 = {
+			fileRef = A093E66E0D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6820D8BFFE5002236B4 = {
+			fileRef = A093E66F0D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6830D8BFFE5002236B4 = {
+			fileRef = A093E6700D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6840D8BFFE5002236B4 = {
+			fileRef = A093E6710D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6850D8BFFE5002236B4 = {
+			fileRef = A093E6720D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6860D8BFFE5002236B4 = {
+			fileRef = A093E6730D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6870D8BFFE5002236B4 = {
+			fileRef = A093E6740D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6880D8BFFE5002236B4 = {
+			fileRef = A093E6750D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A093E6890D8BFFE5002236B4 = {
+			fileRef = A093E6760D8BFFE5002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEA9F0D8C074D00F6C625 = {
+			compilerSpec = com.apple.compilers.gcc;
+			fileType = sourcecode.cpp;
+			isEditable = 1;
+			isa = PBXBuildRule;
+			outputFiles = (
+			);
+			script = /usr/local/bin/ppm;
+		};
+		A09EEB990D8C17D600F6C625 = {
+			fileRef = A093E3910D8BF892002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBAA0D8C18FA00F6C625 = {
+			children = (
+				A09EEBC90D8C194D00F6C625,
+				A09EEBCA0D8C194D00F6C625,
+				A09EEBCB0D8C194D00F6C625,
+				A0F118960D9FB63F00138E8D,
+				A09EEBCC0D8C194D00F6C625,
+				A09EEBCE0D8C194D00F6C625,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBC90D8C194D00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = IPAddress.cpp;
+			path = ../../src/SFML/Network/IPAddress.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBCA0D8C194D00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SocketTCP.cpp;
+			path = ../../src/SFML/Network/SocketTCP.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBCB0D8C194D00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SocketUDP.cpp;
+			path = ../../src/SFML/Network/SocketUDP.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBCC0D8C194D00F6C625 = {
+			children = (
+				A09EEBCD0D8C194D00F6C625,
+			);
+			isa = PBXGroup;
+			name = Unix;
+			path = ../../src/SFML/Network/Unix;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBCD0D8C194D00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SocketHelper.cpp;
+			path = ../../src/SFML/Network/Unix/SocketHelper.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBCE0D8C194D00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Packet.cpp;
+			path = ../../src/SFML/Network/Packet.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBCF0D8C194D00F6C625 = {
+			fileRef = A09EEBC90D8C194D00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBD00D8C194D00F6C625 = {
+			fileRef = A09EEBCA0D8C194D00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBD10D8C194D00F6C625 = {
+			fileRef = A09EEBCB0D8C194D00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBD20D8C194D00F6C625 = {
+			fileRef = A09EEBCD0D8C194D00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBD30D8C194D00F6C625 = {
+			fileRef = A09EEBCE0D8C194D00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBE40D8C19B000F6C625 = {
+			children = (
+				A09EEBED0D8C19BF00F6C625,
+				A09EEBEE0D8C19BF00F6C625,
+				A09EEBEF0D8C19BF00F6C625,
+				A09EEBF40D8C19BF00F6C625,
+				A09EEBF50D8C19BF00F6C625,
+				A09EEBF60D8C19BF00F6C625,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBED0D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Platform.hpp;
+			path = ../../src/SFML/System/Platform.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBEE0D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Randomizer.cpp;
+			path = ../../src/SFML/System/Randomizer.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBEF0D8C19BF00F6C625 = {
+			children = (
+				A09EEBF00D8C19BF00F6C625,
+				A09EEBF10D8C19BF00F6C625,
+				A09EEBF20D8C19BF00F6C625,
+				A09EEBF30D8C19BF00F6C625,
+			);
+			isa = PBXGroup;
+			name = Unix;
+			path = ../../src/SFML/System/Unix;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF00D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Mutex.cpp;
+			path = ../../src/SFML/System/Unix/Mutex.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF10D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Platform.cpp;
+			path = ../../src/SFML/System/Unix/Platform.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF20D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Platform.hpp;
+			path = ../../src/SFML/System/Unix/Platform.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF30D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Thread.cpp;
+			path = ../../src/SFML/System/Unix/Thread.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF40D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Clock.cpp;
+			path = ../../src/SFML/System/Clock.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF50D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Lock.cpp;
+			path = ../../src/SFML/System/Lock.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF60D8C19BF00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Sleep.cpp;
+			path = ../../src/SFML/System/Sleep.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEBF70D8C19BF00F6C625 = {
+			fileRef = A09EEBED0D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBF80D8C19BF00F6C625 = {
+			fileRef = A09EEBEE0D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBF90D8C19BF00F6C625 = {
+			fileRef = A09EEBF00D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBFA0D8C19BF00F6C625 = {
+			fileRef = A09EEBF10D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBFB0D8C19BF00F6C625 = {
+			fileRef = A09EEBF20D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBFC0D8C19BF00F6C625 = {
+			fileRef = A09EEBF30D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBFD0D8C19BF00F6C625 = {
+			fileRef = A09EEBF40D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBFE0D8C19BF00F6C625 = {
+			fileRef = A09EEBF50D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEBFF0D8C19BF00F6C625 = {
+			fileRef = A09EEBF60D8C19BF00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC030D8C19F400F6C625 = {
+			children = (
+				A09EEC0A0D8C1A1B00F6C625,
+				A0C93ED50D9A9E6100B9E0C8,
+				A09EEC090D8C1A1B00F6C625,
+				A09EEC120D8C1A1B00F6C625,
+				A09EEC190D8C1A1B00F6C625,
+				A09EEC140D8C1A1B00F6C625,
+				A0A737320DA796C200B58BB9,
+				A09EEC1B0D8C1A1B00F6C625,
+				A09EEC1A0D8C1A1B00F6C625,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC090D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Window.cpp;
+			path = ../../src/SFML/Window/Window.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC0A0D8C1A1B00F6C625 = {
+			children = (
+				A09EEC0B0D8C1A1B00F6C625,
+				A0BE192E0D9165BC007D4CAD,
+				A09EEC0D0D8C1A1B00F6C625,
+				A09EEC0C0D8C1A1B00F6C625,
+				A09EEC0F0D8C1A1B00F6C625,
+				A09EEC0E0D8C1A1B00F6C625,
+				A09EEC110D8C1A1B00F6C625,
+				A09EEC100D8C1A1B00F6C625,
+			);
+			isa = PBXGroup;
+			name = OSXCarbon;
+			path = ../../src/SFML/Window/OSXCarbon;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC0B0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Joystick.hpp;
+			path = ../../src/SFML/Window/OSXCarbon/Joystick.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC0C0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = JoystickSupport.cpp;
+			path = ../../src/SFML/Window/OSXCarbon/JoystickSupport.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC0D0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = JoystickSupport.hpp;
+			path = ../../src/SFML/Window/OSXCarbon/JoystickSupport.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC0E0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = VideoModeSupport.cpp;
+			path = ../../src/SFML/Window/OSXCarbon/VideoModeSupport.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC0F0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = VideoModeSupport.hpp;
+			path = ../../src/SFML/Window/OSXCarbon/VideoModeSupport.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC100D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = WindowImplCarbon.cpp;
+			path = ../../src/SFML/Window/OSXCarbon/WindowImplCarbon.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC110D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowImplCarbon.hpp;
+			path = ../../src/SFML/Window/OSXCarbon/WindowImplCarbon.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC120D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowImpl.hpp;
+			path = ../../src/SFML/Window/WindowImpl.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC140D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Input.cpp;
+			path = ../../src/SFML/Window/Input.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC190D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = WindowImpl.cpp;
+			path = ../../src/SFML/Window/WindowImpl.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC1A0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = VideoMode.cpp;
+			path = ../../src/SFML/Window/VideoMode.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC1B0D8C1A1B00F6C625 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = VideoModeSupport.hpp;
+			path = ../../src/SFML/Window/VideoModeSupport.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A09EEC1C0D8C1A1B00F6C625 = {
+			fileRef = A09EEC090D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC200D8C1A1B00F6C625 = {
+			fileRef = A09EEC0E0D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC210D8C1A1B00F6C625 = {
+			fileRef = A09EEC0F0D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC220D8C1A1B00F6C625 = {
+			fileRef = A09EEC100D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC230D8C1A1B00F6C625 = {
+			fileRef = A09EEC110D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC240D8C1A1B00F6C625 = {
+			fileRef = A09EEC120D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC260D8C1A1B00F6C625 = {
+			fileRef = A09EEC140D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC2A0D8C1A1B00F6C625 = {
+			fileRef = A09EEC190D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC2B0D8C1A1B00F6C625 = {
+			fileRef = A09EEC1A0D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A09EEC2C0D8C1A1B00F6C625 = {
+			fileRef = A09EEC1B0D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0A6802E0DC3453100F4CA69 = {
+			buildActionMask = 2147483647;
+			files = (
+				A01E92ED0DCDEB6000C54529,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0A6802F0DC3453100F4CA69 = {
+			buildActionMask = 2147483647;
+			files = (
+				A0A680530DC3464800F4CA69,
+				A0A680620DC346C800F4CA69,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0A680300DC3453100F4CA69 = {
+			buildPhases = (
+				A0A6802E0DC3453100F4CA69,
+				A0A6802F0DC3453100F4CA69,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-framework Cocoa -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-testing";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				A0A680340DC3454D00F4CA69,
+				A0A680360DC3454D00F4CA69,
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-testing";
+			productName = testing;
+			productReference = A0A680310DC3453100F4CA69;
+			productType = "com.apple.product-type.tool";
+		};
+		A0A680310DC3453100F4CA69 = {
+			explicitFileType = "compiled.mach-o.executable";
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-testing";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A0A680330DC3454D00F4CA69 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E37E0D8BF87A002236B4;
+			remoteInfo = "sfml-system";
+		};
+		A0A680340DC3454D00F4CA69 = {
+			isa = PBXTargetDependency;
+			target = A093E37E0D8BF87A002236B4;
+			targetProxy = A0A680330DC3454D00F4CA69;
+		};
+		A0A680350DC3454D00F4CA69 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A0C93EB30D9A9CA000B9E0C8;
+			remoteInfo = "sfml-window-cocoa";
+		};
+		A0A680360DC3454D00F4CA69 = {
+			isa = PBXTargetDependency;
+			target = A0C93EB30D9A9CA000B9E0C8;
+			targetProxy = A0A680350DC3454D00F4CA69;
+		};
+		A0A6803E0DC3455800F4CA69 = {
+			children = (
+				A01E92D70DCDE74600C54529,
+				A0A680480DC345FC00F4CA69,
+			);
+			isa = PBXGroup;
+			name = "sfml-testing";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		A0A680480DC345FC00F4CA69 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "window-opengl.cpp";
+			path = "test/window-opengl.cpp";
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0A680530DC3464800F4CA69 = {
+			fileRef = A093E3910D8BF892002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0A680620DC346C800F4CA69 = {
+			fileRef = A093E37F0D8BF87A002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0A737320DA796C200B58BB9 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Joystick.hpp;
+			path = ../../src/SFML/Window/Joystick.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0A737330DA796C200B58BB9 = {
+			fileRef = A0A737320DA796C200B58BB9;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0A737340DA796C900B58BB9 = {
+			fileRef = A0A737320DA796C200B58BB9;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0B4CD390D96B11500DEEE0F = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E3740D8BF86E002236B4;
+			remoteInfo = SFML;
+		};
+		A0B4CD3A0D96B11500DEEE0F = {
+			isa = PBXTargetDependency;
+			target = A093E3740D8BF86E002236B4;
+			targetProxy = A0B4CD390D96B11500DEEE0F;
+		};
+		A0BA41F40DDF0C9700039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = Matrix3.inl;
+			path = ../../include/SFML/Graphics/Matrix3.inl;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA41F50DDF0C9700039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Matrix3.hpp;
+			path = ../../include/SFML/Graphics/Matrix3.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA41F60DDF0C9700039094 = {
+			fileRef = A0BA41F40DDF0C9700039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA41F70DDF0C9700039094 = {
+			fileRef = A0BA41F50DDF0C9700039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA42040DDF0D1B00039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = OpenGL.hpp;
+			path = ../../include/SFML/Window/OpenGL.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42050DDF0D1B00039094 = {
+			fileRef = A0BA42040DDF0D1B00039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA420D0DDF0D5D00039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowSettings.hpp;
+			path = ../../include/SFML/Window/WindowSettings.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA420E0DDF0D5D00039094 = {
+			fileRef = A0BA420D0DDF0D5D00039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA42130DDF0E3F00039094 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export HEADER_PATH=$BUILT_PRODUCTS_DIR/$PUBLIC_HEADERS_FOLDER_PATH\n\nrm -rf $HEADER_PATH\nmkdir -p $HEADER_PATH\nln -s Versions/Current/Headers $HEADER_PATH/../../../Headers\ncp -r $SRCROOT/../../include/SFML/ $HEADER_PATH";
+		};
+		A0BA42430DDF186600039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Renderer.cpp;
+			path = ../../src/SFML/Graphics/Renderer.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42440DDF186600039094 = {
+			fileRef = A0BA42430DDF186600039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA424A0DDF189200039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Renderer.hpp;
+			path = ../../src/SFML/Graphics/Renderer.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA424B0DDF189200039094 = {
+			fileRef = A0BA424A0DDF189200039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA42540DDF18B700039094 = {
+			children = (
+				A0BA42550DDF18B700039094,
+				A0BA42560DDF18B700039094,
+				A0BA42570DDF18B700039094,
+				A0BA42580DDF18B700039094,
+			);
+			isa = PBXGroup;
+			name = GLEW;
+			path = ../../src/SFML/Graphics/GLEW;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42550DDF18B700039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.c;
+			name = glew.c;
+			path = ../../src/SFML/Graphics/GLEW/glew.c;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42560DDF18B700039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = glew.h;
+			path = ../../src/SFML/Graphics/GLEW/glew.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42570DDF18B700039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = glxew.h;
+			path = ../../src/SFML/Graphics/GLEW/glxew.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42580DDF18B700039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = wglew.h;
+			path = ../../src/SFML/Graphics/GLEW/wglew.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42590DDF18B700039094 = {
+			fileRef = A0BA42550DDF18B700039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA425A0DDF18B700039094 = {
+			fileRef = A0BA42560DDF18B700039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA425B0DDF18B700039094 = {
+			fileRef = A0BA42570DDF18B700039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA425C0DDF18B700039094 = {
+			fileRef = A0BA42580DDF18B700039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BA42670DDF18F100039094 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Matrix3.cpp;
+			path = ../../src/SFML/Graphics/Matrix3.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BA42680DDF18F100039094 = {
+			fileRef = A0BA42670DDF18F100039094;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BE19130D9164F5007D4CAD = {
+			fileRef = A093E4170D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BE19140D9164F6007D4CAD = {
+			fileRef = A093E4190D8BF9E3002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BE19170D91655C007D4CAD = {
+			fileRef = A093E4010D8BF9E2002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BE192E0D9165BC007D4CAD = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Joystick.cpp;
+			path = ../../src/SFML/Window/OSXCarbon/Joystick.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0BE192F0D9165BC007D4CAD = {
+			fileRef = A0BE192E0D9165BC007D4CAD;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0BE1A200D917332007D4CAD = {
+			fileRef = A093E37F0D8BF87A002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C63BEE0DAEA042006DB460 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = WindowController.h;
+			path = ../../src/SFML/Window/OSXCocoa/WindowController.h;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C63BEF0DAEA042006DB460 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = WindowController.mm;
+			path = ../../src/SFML/Window/OSXCocoa/WindowController.mm;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C63BF00DAEA042006DB460 = {
+			fileRef = A0C63BEE0DAEA042006DB460;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C63BF10DAEA042006DB460 = {
+			fileRef = A0C63BEF0DAEA042006DB460;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93EAF0D9A9CA000B9E0C8 = {
+			buildActionMask = 2147483647;
+			files = (
+				A0C93EE10D9A9E8F00B9E0C8,
+				A0C93EE20D9A9E8F00B9E0C8,
+				A0C93F210D9AA1C000B9E0C8,
+				A0C93F250D9AA1C300B9E0C8,
+				A0F39BD50D9C1D5E001CF332,
+				A0A737330DA796C200B58BB9,
+				A0C63BF00DAEA042006DB460,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C93EB00D9A9CA000B9E0C8 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C93EB10D9A9CA000B9E0C8 = {
+			buildActionMask = 2147483647;
+			files = (
+				A0C93EDE0D9A9E8F00B9E0C8,
+				A0C93EDF0D9A9E8F00B9E0C8,
+				A0C93EE00D9A9E8F00B9E0C8,
+				A0C93F1E0D9AA1BF00B9E0C8,
+				A0C93F200D9AA1C000B9E0C8,
+				A0C93F230D9AA1C100B9E0C8,
+				A0C93F240D9AA1C200B9E0C8,
+				A0C63BF10DAEA042006DB460,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C93EB20D9A9CA000B9E0C8 = {
+			buildActionMask = 2147483647;
+			files = (
+				A0C93F930D9AA9FA00B9E0C8,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C93EB30D9A9CA000B9E0C8 = {
+			buildPhases = (
+				A0C93EAF0D9A9CA000B9E0C8,
+				A0C93EB00D9A9CA000B9E0C8,
+				A0C93EB10D9A9CA000B9E0C8,
+				A0C93EB20D9A9CA000B9E0C8,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../../include ${SRCROOT}/../../src";
+				INFOPLIST_FILE = "sfml-window-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "-DSFML_IMPL_COCOA";
+				OTHER_LDFLAGS = "-framework OpenGL -framework Carbon -framework Cocoa";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sfml-window";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				A0C93F920D9AA94100B9E0C8,
+			);
+			isa = PBXNativeTarget;
+			name = "sfml-window-cocoa";
+			productName = "sfml-window";
+			productReference = A0C93EB40D9A9CA000B9E0C8;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>sfml-window</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.sfml_window</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.framework";
+		};
+		A0C93EB40D9A9CA000B9E0C8 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "sfml-window.framework";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A0C93ED50D9A9E6100B9E0C8 = {
+			children = (
+				A0C63BEE0DAEA042006DB460,
+				A0C63BEF0DAEA042006DB460,
+				A0C93EDD0D9A9E8E00B9E0C8,
+				A0C93ED90D9A9E8E00B9E0C8,
+				A0C93EDC0D9A9E8E00B9E0C8,
+				A0C93EDA0D9A9E8E00B9E0C8,
+				A0F39BD40D9C1D5E001CF332,
+				A0C93EDB0D9A9E8E00B9E0C8,
+			);
+			isa = PBXGroup;
+			name = OSXCocoa;
+			path = ../../src/SFML/Window/OSXCocoa;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C93ED90D9A9E8E00B9E0C8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = WindowImplCocoa.mm;
+			path = ../../src/SFML/Window/OSXCocoa/WindowImplCocoa.mm;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C93EDA0D9A9E8E00B9E0C8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = VideoModeSupport.cpp;
+			path = ../../src/SFML/Window/OSXCocoa/VideoModeSupport.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C93EDB0D9A9E8E00B9E0C8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Joystick.cpp;
+			path = ../../src/SFML/Window/OSXCocoa/Joystick.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C93EDC0D9A9E8E00B9E0C8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = VideoModeSupport.hpp;
+			path = ../../src/SFML/Window/OSXCocoa/VideoModeSupport.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C93EDD0D9A9E8E00B9E0C8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = WindowImplCocoa.hpp;
+			path = ../../src/SFML/Window/OSXCocoa/WindowImplCocoa.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0C93EDE0D9A9E8F00B9E0C8 = {
+			fileRef = A0C93ED90D9A9E8E00B9E0C8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93EDF0D9A9E8F00B9E0C8 = {
+			fileRef = A0C93EDA0D9A9E8E00B9E0C8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93EE00D9A9E8F00B9E0C8 = {
+			fileRef = A0C93EDB0D9A9E8E00B9E0C8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93EE10D9A9E8F00B9E0C8 = {
+			fileRef = A0C93EDC0D9A9E8E00B9E0C8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93EE20D9A9E8F00B9E0C8 = {
+			fileRef = A0C93EDD0D9A9E8E00B9E0C8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F1E0D9AA1BF00B9E0C8 = {
+			fileRef = A09EEC140D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F200D9AA1C000B9E0C8 = {
+			fileRef = A09EEC1A0D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F210D9AA1C000B9E0C8 = {
+			fileRef = A09EEC1B0D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F230D9AA1C100B9E0C8 = {
+			fileRef = A09EEC090D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F240D9AA1C200B9E0C8 = {
+			fileRef = A09EEC190D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F250D9AA1C300B9E0C8 = {
+			fileRef = A09EEC120D8C1A1B00F6C625;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0C93F910D9AA94100B9E0C8 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E37E0D8BF87A002236B4;
+			remoteInfo = "sfml-system";
+		};
+		A0C93F920D9AA94100B9E0C8 = {
+			isa = PBXTargetDependency;
+			target = A093E37E0D8BF87A002236B4;
+			targetProxy = A0C93F910D9AA94100B9E0C8;
+		};
+		A0C93F930D9AA9FA00B9E0C8 = {
+			fileRef = A093E37F0D8BF87A002236B4;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0F0BA820D92E4F500056981 = {
+			buildPhases = (
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = All;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				A0B4CD3A0D96B11500DEEE0F,
+				A0F0BA8C0D92E52300056981,
+				A0F0BA8A0D92E52300056981,
+				A0F0BA860D92E52300056981,
+				A07EA05B0DB657A9007C7747,
+				A0F0BA880D92E52300056981,
+			);
+			isa = PBXAggregateTarget;
+			name = All;
+			productName = All;
+		};
+		A0F0BA850D92E52300056981 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E3990D8BF89B002236B4;
+			remoteInfo = "sfml-audio";
+		};
+		A0F0BA860D92E52300056981 = {
+			isa = PBXTargetDependency;
+			target = A093E3990D8BF89B002236B4;
+			targetProxy = A0F0BA850D92E52300056981;
+		};
+		A0F0BA870D92E52300056981 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E3A20D8BF8A2002236B4;
+			remoteInfo = "sfml-graphics";
+		};
+		A0F0BA880D92E52300056981 = {
+			isa = PBXTargetDependency;
+			target = A093E3A20D8BF8A2002236B4;
+			targetProxy = A0F0BA870D92E52300056981;
+		};
+		A0F0BA890D92E52300056981 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E3870D8BF885002236B4;
+			remoteInfo = "sfml-network";
+		};
+		A0F0BA8A0D92E52300056981 = {
+			isa = PBXTargetDependency;
+			target = A093E3870D8BF885002236B4;
+			targetProxy = A0F0BA890D92E52300056981;
+		};
+		A0F0BA8B0D92E52300056981 = {
+			containerPortal = A093E36A0D8BF860002236B4;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = A093E37E0D8BF87A002236B4;
+			remoteInfo = "sfml-system";
+		};
+		A0F0BA8C0D92E52300056981 = {
+			isa = PBXTargetDependency;
+			target = A093E37E0D8BF87A002236B4;
+			targetProxy = A0F0BA8B0D92E52300056981;
+		};
+		A0F1188C0D9FB60300138E8D = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = SelectorBase.hpp;
+			path = ../../include/SFML/Network/SelectorBase.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0F1188D0D9FB60300138E8D = {
+			fileRef = A0F1188C0D9FB60300138E8D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0F118960D9FB63F00138E8D = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SelectorBase.cpp;
+			path = ../../src/SFML/Network/SelectorBase.cpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0F118970D9FB63F00138E8D = {
+			fileRef = A0F118960D9FB63F00138E8D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A0F39BD40D9C1D5E001CF332 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.h;
+			name = Joystick.hpp;
+			path = ../../src/SFML/Window/OSXCocoa/Joystick.hpp;
+			refType = 2;
+			sourceTree = SOURCE_ROOT;
+		};
+		A0F39BD50D9C1D5E001CF332 = {
+			fileRef = A0F39BD40D9C1D5E001CF332;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = A093E36A0D8BF860002236B4;
+}
