@@ -6,7 +6,7 @@
 ////////////////////////////////
 
 PyMemberDef PySfEventText_members[] = {
-	{"Unicode", T_USHORT, 8, 0, ""},
+	{"Unicode", T_USHORT, offsetof(PySfEventText, Unicode), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -82,10 +82,10 @@ PySfEventKey_dealloc(PySfEventKey* self)
 }
 
 PyMemberDef PySfEventKey_members[] = {
-	{"Alt", T_OBJECT, 8, 0, ""},
-	{"Control", T_OBJECT, 12, 0, ""},
-	{"Shift", T_OBJECT, 16, 0, ""},
-	{"Code", T_UINT, 20, 0, ""},
+	{"Alt", T_OBJECT, offsetof(PySfEventKey, Alt), 0, ""},
+	{"Control", T_OBJECT, offsetof(PySfEventKey, Control), 0, ""},
+	{"Shift", T_OBJECT, offsetof(PySfEventKey, Shift), 0, ""},
+	{"Code", T_UINT, offsetof(PySfEventKey, Code), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -149,8 +149,8 @@ PySfEventMouseMove_dealloc(PySfEventMouseMove *self)
 
 
 PyMemberDef PySfEventMouseMove_members[] = {
-	{"X", T_UINT, 8, 0, ""},
-	{"Y", T_UINT, 12, 0, ""},
+	{"X", T_UINT, offsetof(PySfEventMouseMove, X), 0, ""},
+	{"Y", T_UINT, offsetof(PySfEventMouseMove, Y), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -214,7 +214,7 @@ PySfEventMouseButton_dealloc(PySfEventMouseButton* self)
 
 
 PyMemberDef PySfEventMouseButton_members[] = {
-	{"Button", T_UINT, 8, 0, ""},
+	{"Button", T_UINT, offsetof(PySfEventMouseButton, Button), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -341,9 +341,9 @@ PySfEventJoyMove_dealloc(PySfEventJoyMove* self)
 
 
 PyMemberDef PySfEventJoyMove_members[] = {
-	{"JoystickId", T_UINT, 8, 0, ""},
-	{"Axis", T_UINT, 12, 0, ""},
-	{"Position", T_FLOAT, 16, 0, ""},
+	{"JoystickId", T_UINT, offsetof(PySfEventJoyMove,JoystickId), 0, ""},
+	{"Axis", T_UINT, offsetof(PySfEventJoyMove,Axis), 0, ""},
+	{"Position", T_FLOAT, offsetof(PySfEventJoyMove,Position), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -407,8 +407,8 @@ PySfEventJoyButton_dealloc(PySfEventJoyButton* self)
 
 
 PyMemberDef PySfEventJoyButton_members[] = {
-	{"JoystickId", T_UINT, 8, 0, ""},
-	{"Button", T_UINT, 12, 0, ""},
+	{"JoystickId", T_UINT, offsetof(PySfEventJoyButton, JoystickId), 0, ""},
+	{"Button", T_UINT, offsetof(PySfEventJoyButton, Button), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -471,8 +471,8 @@ PySfEventSize_dealloc(PySfEventSize* self)
 }
 
 PyMemberDef PySfEventSize_members[] = {
-	{"Width", T_UINT, 8, 0, ""},
-	{"Height", T_UINT, 12, 0, ""},
+	{"Width", T_UINT, offsetof(PySfEventSize, Width), 0, ""},
+	{"Height", T_UINT, offsetof(PySfEventSize, Height), 0, ""},
 	{NULL}  /* Sentinel */
 };
 
@@ -544,6 +544,7 @@ PySfEvent_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
 	{
 		self->Text = PyObject_New(PySfEventText, &PySfEventTextType);
 		self->Key = PyObject_New(PySfEventKey, &PySfEventKeyType);
+		// self->Key = (PySfEventKey*) PyType_GenericNew(&PySfEventKeyType, Py_None, Py_None);
 		self->MouseMove = PyObject_New(PySfEventMouseMove, &PySfEventMouseMoveType);
 		self->MouseButton = PyObject_New(PySfEventMouseButton, &PySfEventMouseButtonType);
 		self->MouseWheel = PyObject_New(PySfEventMouseWheel, &PySfEventMouseWheelType);

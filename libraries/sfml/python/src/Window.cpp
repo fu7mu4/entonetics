@@ -86,7 +86,7 @@ PySfWindow_Create(PySfWindow* self, PyObject *args, PyObject *kwds)
 	char *Title=NULL;
 	unsigned long WindowStyle = sf::Style::Resize | sf::Style::Close;
 	PySfWindowSettings *ParamsTmp=NULL;
-	sf::WindowSettings *Params;
+	sf::WindowSettings *Params = NULL;
 
 	const char *kwlist[] = {"VideoMode", "Title", "WindowStyle", "Params", NULL};
 
@@ -105,8 +105,6 @@ PySfWindow_Create(PySfWindow* self, PyObject *args, PyObject *kwds)
 		PySfWindowSettingsUpdate(ParamsTmp);
 		Params = ParamsTmp->obj;
 	}
-	else
-		Params = new sf::WindowSettings();
 
 	self->obj->Create(*VideoMode, Title, WindowStyle, *Params);
 
