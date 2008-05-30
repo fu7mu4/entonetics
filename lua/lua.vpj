@@ -30,7 +30,7 @@
 				CaptureOutputWith="ProcessBuffer"
 				SaveOption="SaveWorkspaceFiles"
 				RunFromDir="%rw">
-				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+				<Exec CmdLine="make linux"/>
 			</Target>
 			<Target
 				Name="Rebuild"
@@ -87,7 +87,7 @@
 				CaptureOutputWith="ProcessBuffer"
 				SaveOption="SaveWorkspaceFiles"
 				RunFromDir="%rw">
-				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+				<Exec CmdLine="make linux"/>
 			</Target>
 			<Target
 				Name="Rebuild"

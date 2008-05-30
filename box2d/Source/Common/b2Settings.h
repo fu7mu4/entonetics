@@ -22,7 +22,7 @@
 #include <assert.h>
 #include <math.h>
 
-#define B2_NOT_USED(x) x
+#define B2_NOT_USED(x)
 #define b2Assert(A) assert(A)
 
 
@@ -93,6 +93,9 @@ const float32 b2_toiSlop = 8.0f * b2_linearSlop;
 
 /// Maximum number of contacts to be handled to solve a TOI island.
 const int32 b2_maxTOIContactsPerIsland = 32;
+
+/// Maximum number of contacts to be handled to solve a TOI island.
+const int32 b2_maxTOIJointsPerIsland = 32;
 
 /// A velocity threshold for elastic collisions. Any collision with a relative linear
 /// velocity below this threshold will be treated as inelastic.

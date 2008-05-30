@@ -2,7 +2,7 @@
 <Project
 	Version="10.0"
 	VendorName="SlickEdit"
-	WorkingDir="."
+	WorkingDir="%rp/../../.."
 	VCSProject="Subversion:">
 	<Config
 		Name="Debug"
@@ -30,8 +30,9 @@
 				MenuCaption="&amp;Build"
 				CaptureOutputWith="ProcessBuffer"
 				SaveOption="SaveWorkspaceFiles"
-				RunFromDir="%rw">
-				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+				RunFromDir="%rw"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="make"/>
 			</Target>
 			<Target
 				Name="Rebuild"
@@ -87,8 +88,9 @@
 				MenuCaption="&amp;Build"
 				CaptureOutputWith="ProcessBuffer"
 				SaveOption="SaveWorkspaceFiles"
-				RunFromDir="%rw">
-				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+				RunFromDir="%rw"
+				ClearProcessBuffer="1">
+				<Exec CmdLine="make"/>
 			</Target>
 			<Target
 				Name="Rebuild"
