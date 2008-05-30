@@ -43,16 +43,22 @@ PySfString_init(PySfString *self, PyObject *args, PyObject *kwds)
 	char *kwlist[] = {"Text", "Font", "Size", NULL};
 	float Size = 30.f;
 	std::string Text = "";
+	char *TextTmp = NULL;
 	PySfFont *FontTmp = NULL;
-	sf::Font *Font = (sf::Font *)&(sf::Font::GetDefaultFont());
+	sf::Font *Font;
 
-	if (! PyArg_ParseTupleAndKeywords(args, kwds, "|sO!f", kwlist, &Text, &PySfFontType, &FontTmp, &Size))
+	if (! PyArg_ParseTupleAndKeywords(args, kwds, "|sO!f", kwlist, &TextTmp, &PySfFontType, &FontTmp, &Size))
 		return -1;
 
 	if (FontTmp)
 		Font = (FontTmp->obj);
+	else
+		Font = (sf::Font *)&(sf::Font::GetDefaultFont());
 
-	self->obj = new sf::String(*(new std::string(Text)), *Font, Size);
+	if (TextTmp)
+		Text.assign(TextTmp);
+
+	self->obj = new sf::String(Text, *Font, Size);
 	return 0;
 }
 

@@ -46,17 +46,28 @@ PySfShape_AddPoint(PySfShape* self, PyObject *args, PyObject *kwds)
 {
 	char *kwlist[] = {"X", "Y", "Col", "OutlineCol", NULL};
 	float X, Y;
-	sf::Color Col = sf::Color(255, 255, 255), OutlineCol = sf::Color(0, 0, 0);
+	sf::Color *Col, *OutlineCol;
 	PySfColor *ColTmp=NULL, *OutlineColTmp=NULL;
 	if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff|O!O!", kwlist, &X, &Y, &PySfColorType, &Col, &PySfColorType, &OutlineCol))
 		return NULL;
 
 	if (ColTmp)
-		Col = *(ColTmp->obj);
-	if (OutlineColTmp)
-		OutlineCol = *(OutlineColTmp->obj);
+	{
+		PySfColorUpdate(ColTmp);
+		Col = ColTmp->obj;
+	}
+	else
+		Col = (sf::Color *)&sf::Color::Black;
 
-	self->obj->AddPoint(X, Y, Col, OutlineCol);
+	if (OutlineColTmp)
+	{
+		PySfColorUpdate(OutlineColTmp);
+		OutlineCol = OutlineColTmp->obj;
+	}
+	else
+		OutlineCol = (sf::Color *)&sf::Color::Black;
+
+	self->obj->AddPoint(X, Y, *Col, *OutlineCol);
 
 	Py_RETURN_NONE;
 }
@@ -81,14 +92,20 @@ PySfShape_Line(PySfShape* self, PyObject *args, PyObject *kwds)
 	char *kwlist[] = {"X0", "Y0", "X1", "Y1", "Thickness", "Col", "Outline", "OutlineCol", NULL};
 	PySfShape *Line = GetNewPySfShape();
 	float X0, Y0, X1, Y1, Thickness, Outline = 0.f;
-	sf::Color OutlineCol=sf::Color(0,0,0);
+	sf::Color *OutlineCol;
 	PySfColor *ColTmp, *OutlineColTmp=NULL;
 	if (!PyArg_ParseTupleAndKeywords(args, kwds, "fffffO!|fO!", kwlist, &X0, &Y0, &X1, &Y1, &Thickness, &PySfColorType, &ColTmp, &Outline, &PySfColorType, &OutlineColTmp))
 		return NULL;
 	if (OutlineColTmp)
-		OutlineCol = *(OutlineColTmp->obj);
+	{
+		PySfColorUpdate(OutlineColTmp);
+		OutlineCol = OutlineColTmp->obj;
+	}
+	else
+		OutlineCol = (sf::Color *)&sf::Color::Black;
 
-	Line->obj = new sf::Shape(sf::Shape::Line(X0, Y0, X1, Y1, Thickness, *(ColTmp->obj), Outline, *(new sf::Color(OutlineCol))));
+	PySfColorUpdate(ColTmp);
+	Line->obj = new sf::Shape(sf::Shape::Line(X0, Y0, X1, Y1, Thickness, *(ColTmp->obj), Outline, *OutlineCol));
 	return (PyObject *)Line;
 }
 
@@ -99,14 +116,20 @@ PySfShape_Rectangle(PySfShape* self, PyObject *args, PyObject *kwds)
 	char *kwlist[] = {"X0", "Y0", "X1", "Y1", "Col", "Outline", "OutlineCol", NULL};
 	PySfShape *Rectangle = GetNewPySfShape();
 	float X0, Y0, X1, Y1, Outline = 0.f;
-	sf::Color OutlineCol=sf::Color(0,0,0);
+	sf::Color *OutlineCol;
 	PySfColor *ColTmp, *OutlineColTmp=NULL;
 	if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffffO!|fO!", kwlist, &X0, &Y0, &X1, &Y1, &PySfColorType, &ColTmp, &Outline, &PySfColorType, &OutlineColTmp))
 		return NULL;
 	if (OutlineColTmp)
-		OutlineCol = *(OutlineColTmp->obj);
+	{
+		PySfColorUpdate(OutlineColTmp);
+		OutlineCol = OutlineColTmp->obj;
+	}
+	else
+		OutlineCol = (sf::Color *)&sf::Color::Black;
 
-	Rectangle->obj = new sf::Shape(sf::Shape::Rectangle(X0, Y0, X1, Y1, *(ColTmp->obj), Outline, *(new sf::Color(OutlineCol))));
+	PySfColorUpdate(ColTmp);
+	Rectangle->obj = new sf::Shape(sf::Shape::Rectangle(X0, Y0, X1, Y1, *(ColTmp->obj), Outline, *OutlineCol));
 	return (PyObject *)Rectangle;
 }
 
@@ -117,14 +140,20 @@ PySfShape_Circle(PySfShape* self, PyObject *args, PyObject *kwds)
 	char *kwlist[] = {"X", "Y", "Radius", "Col", "Outline", "OutlineCol", NULL};
 	PySfShape *Circle = GetNewPySfShape();
 	float X, Y, Radius, Outline = 0.f;
-	sf::Color OutlineCol=sf::Color(0,0,0);
+	sf::Color *OutlineCol;
 	PySfColor *ColTmp, *OutlineColTmp=NULL;
 	if (!PyArg_ParseTupleAndKeywords(args, kwds, "fffO!|fO!", kwlist, &X, &Y, &Radius, &PySfColorType, &ColTmp, &Outline, &PySfColorType, &OutlineColTmp))
 		return NULL;
 	if (OutlineColTmp)
-		OutlineCol = *(OutlineColTmp->obj);
+	{
+		PySfColorUpdate(OutlineColTmp);
+		OutlineCol = OutlineColTmp->obj;
+	}
+	else
+		OutlineCol = (sf::Color *)&sf::Color::Black;
 
-	Circle->obj = new sf::Shape(sf::Shape::Circle(X, Y, Radius, *(ColTmp->obj), Outline, *(new sf::Color(OutlineCol))));
+	PySfColorUpdate(ColTmp);
+	Circle->obj = new sf::Shape(sf::Shape::Circle(X, Y, Radius, *(ColTmp->obj), Outline, *OutlineCol));
 	return (PyObject *)Circle;
 }
 
