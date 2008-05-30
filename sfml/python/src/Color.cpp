@@ -136,7 +136,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "Black", (PyObject *)Black);
 	Py_DECREF(Black);
 	White = GetNewPySfColor();
-	White->obj = (sf::Color *) &(sf::Color::Black);
+	White->obj = (sf::Color *) &(sf::Color::White);
 	White->r = sf::Color::White.r;
 	White->g = sf::Color::White.g;
 	White->b = sf::Color::White.b;
@@ -144,7 +144,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "White", (PyObject *)White);
 	Py_DECREF(White);
 	Red = GetNewPySfColor();
-	Red->obj = (sf::Color *) &(sf::Color::Black);
+	Red->obj = (sf::Color *) &(sf::Color::Red);
 	Red->r = sf::Color::Red.r;
 	Red->g = sf::Color::Red.g;
 	Red->b = sf::Color::Red.b;
@@ -152,7 +152,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "Red", (PyObject *)Red);
 	Py_DECREF(Red);
 	Green = GetNewPySfColor();
-	Green->obj = (sf::Color *) &(sf::Color::Black);
+	Green->obj = (sf::Color *) &(sf::Color::Green);
 	Green->r = sf::Color::Green.r;
 	Green->g = sf::Color::Green.g;
 	Green->b = sf::Color::Green.b;
@@ -160,7 +160,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "Green", (PyObject *)Green);
 	Py_DECREF(Green);
 	Blue = GetNewPySfColor();
-	Blue->obj = (sf::Color *) &(sf::Color::Black);
+	Blue->obj = (sf::Color *) &(sf::Color::Blue);
 	Blue->r = sf::Color::Blue.r;
 	Blue->g = sf::Color::Blue.g;
 	Blue->b = sf::Color::Blue.b;
@@ -168,7 +168,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "Blue", (PyObject *)Blue);
 	Py_DECREF(Blue);
 	Yellow = GetNewPySfColor();
-	Yellow->obj = (sf::Color *) &(sf::Color::Black);
+	Yellow->obj = (sf::Color *) &(sf::Color::Yellow);
 	Yellow->r = sf::Color::Yellow.r;
 	Yellow->g = sf::Color::Yellow.g;
 	Yellow->b = sf::Color::Yellow.b;
@@ -176,7 +176,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "Yellow", (PyObject *)Yellow);
 	Py_DECREF(Yellow);
 	Magenta = GetNewPySfColor();
-	Magenta->obj = (sf::Color *) &(sf::Color::Black);
+	Magenta->obj = (sf::Color *) &(sf::Color::Magenta);
 	Magenta->r = sf::Color::Magenta.r;
 	Magenta->g = sf::Color::Magenta.g;
 	Magenta->b = sf::Color::Magenta.b;
@@ -184,7 +184,7 @@ PySfColor_InitConst()
 	PyDict_SetItemString(PySfColorType.tp_dict, "Magenta", (PyObject *)Magenta);
 	Py_DECREF(Magenta);
 	Cyan = GetNewPySfColor();
-	Cyan->obj = (sf::Color *) &(sf::Color::Black);
+	Cyan->obj = (sf::Color *) &(sf::Color::Cyan);
 	Cyan->r = sf::Color::Cyan.r;
 	Cyan->g = sf::Color::Cyan.g;
 	Cyan->b = sf::Color::Cyan.b;
