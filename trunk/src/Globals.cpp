@@ -2,9 +2,10 @@
 
 namespace ento
 {
-	Simulator* The_Sim;
-	Viewing* The_Viewing;
-	TerrainManager* The_Terrain;
-	InputManager* The_Inputs;
-	sf::RenderWindow* The_App;
+   sf::RenderWindow* The_App;
+   GraphicSys*       The_Graphics;
+   InputManager*     The_Inputs;
+   Simulator*        The_Sim;
+   TerrainManager*   The_Terrain;
+   Viewing*          The_Viewing;
 }

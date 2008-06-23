@@ -128,48 +128,21 @@
 			<Exec CmdLine='as -o "%bd%n.o" "%f"'/>
 		</Rule>
 	</Rules>
-	<Files>
+	<CustomFolders>
 		<Folder
 			Name="Source Files"
 			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
 			<Folder
 				Name="Audio"
 				Filters="">
-				<F N="../../src/SFML/Audio/AudioDevice.cpp"/>
-				<F N="../../src/SFML/Audio/AudioDevice.hpp"/>
-				<F N="../../src/SFML/Audio/AudioResource.cpp"/>
-				<F N="../../src/SFML/Audio/Listener.cpp"/>
-				<F N="../../src/SFML/Audio/Music.cpp"/>
-				<F N="../../src/SFML/Audio/OpenAL.hpp"/>
-				<F N="../../src/SFML/Audio/SoundBuffer.cpp"/>
-				<F N="../../src/SFML/Audio/SoundBufferRecorder.cpp"/>
-				<F N="../../src/SFML/Audio/Sound.cpp"/>
-				<F N="../../src/SFML/Audio/SoundFile.cpp"/>
-				<F N="../../src/SFML/Audio/SoundFileDefault.cpp"/>
-				<F N="../../src/SFML/Audio/SoundFileDefault.hpp"/>
-				<F N="../../src/SFML/Audio/SoundFile.hpp"/>
-				<F N="../../src/SFML/Audio/SoundFileOgg.cpp"/>
-				<F N="../../src/SFML/Audio/SoundFileOgg.hpp"/>
-				<F N="../../src/SFML/Audio/SoundRecorder.cpp"/>
-				<F N="../../src/SFML/Audio/SoundStream.cpp"/>
-				<F N="../../src/SFML/Audio/stb_vorbis/stb_vorbis.c"/>
-				<F N="../../src/SFML/Audio/stb_vorbis/stb_vorbis.h"/>
 			</Folder>
 			<Folder
 				Name="Main"
 				Filters="">
-				<F N="../../src/SFML/Main/SFML_Main.cpp"/>
 			</Folder>
 			<Folder
 				Name="Network"
 				Filters="">
-				<F N="../../src/SFML/Network/IPAddress.cpp"/>
-				<F N="../../src/SFML/Network/Packet.cpp"/>
-				<F N="../../src/SFML/Network/SelectorBase.cpp"/>
-				<F N="../../src/SFML/Network/SocketTCP.cpp"/>
-				<F N="../../src/SFML/Network/SocketUDP.cpp"/>
-				<F N="../../src/SFML/Network/Unix/SocketHelper.cpp"/>
-				<F N="../../src/SFML/Network/Win32/SocketHelper.cpp"/>
 			</Folder>
 			<Folder
 				Name="System"
@@ -177,24 +150,11 @@
 				<Folder
 					Name="Unix"
 					Filters="">
-					<F N="../../src/SFML/System/Unix/Mutex.cpp"/>
-					<F N="../../src/SFML/System/Unix/Platform.cpp"/>
-					<F N="../../src/SFML/System/Unix/Platform.hpp"/>
-					<F N="../../src/SFML/System/Unix/Thread.cpp"/>
 				</Folder>
 				<Folder
 					Name="Win32"
 					Filters="">
-					<F N="../../src/SFML/System/Win32/Mutex.cpp"/>
-					<F N="../../src/SFML/System/Win32/Platform.cpp"/>
-					<F N="../../src/SFML/System/Win32/Platform.hpp"/>
-					<F N="../../src/SFML/System/Win32/Thread.cpp"/>
 				</Folder>
-				<F N="../../src/SFML/System/Platform.hpp"/>
-				<F N="../../src/SFML/System/Clock.cpp"/>
-				<F N="../../src/SFML/System/Lock.cpp"/>
-				<F N="../../src/SFML/System/Randomizer.cpp"/>
-				<F N="../../src/SFML/System/Sleep.cpp"/>
 			</Folder>
 			<Folder
 				Name="Window"
@@ -202,69 +162,27 @@
 				<Folder
 					Name="glex"
 					Filters="">
-					<F N="../../src/SFML/Window/glext/glext.h"/>
-					<F N="../../src/SFML/Window/glext/glxext.h"/>
-					<F N="../../src/SFML/Window/glext/wglext.h"/>
 				</Folder>
 				<Folder
 					Name="Linux"
 					Filters="">
-					<F N="../../src/SFML/Window/Linux/Joystick.cpp"/>
-					<F N="../../src/SFML/Window/Linux/Joystick.hpp"/>
-					<F N="../../src/SFML/Window/Linux/VideoModeSupport.cpp"/>
-					<F N="../../src/SFML/Window/Linux/VideoModeSupport.hpp"/>
-					<F N="../../src/SFML/Window/Linux/WindowImplX11.cpp"/>
-					<F N="../../src/SFML/Window/Linux/WindowImplX11.hpp"/>
 				</Folder>
 				<Folder
 					Name="Template for new ports"
 					Filters="">
-					<F N="../../src/SFML/Window/Template for new ports/Joystick.cpp"/>
-					<F N="../../src/SFML/Window/Template for new ports/Joystick.hpp"/>
-					<F N="../../src/SFML/Window/Template for new ports/VideoModeSupport.cpp"/>
-					<F N="../../src/SFML/Window/Template for new ports/VideoModeSupport.hpp"/>
-					<F N="../../src/SFML/Window/Template for new ports/WindowImplXXX.cpp"/>
-					<F N="../../src/SFML/Window/Template for new ports/WindowImplXXX.hpp"/>
 				</Folder>
 				<Folder
 					Name="OSXCarbon"
 					Filters="">
-					<F N="../../src/SFML/Window/OSXCarbon/Joystick.cpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/Joystick.hpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/JoystickSupport.cpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/JoystickSupport.hpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/VideoModeSupport.cpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/VideoModeSupport.hpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/WindowImplCarbon.cpp"/>
-					<F N="../../src/SFML/Window/OSXCarbon/WindowImplCarbon.hpp"/>
 				</Folder>
 				<Folder
 					Name="OSXCocoa"
 					Filters="">
-					<F N="../../src/SFML/Window/OSXCocoa/Joystick.cpp"/>
-					<F N="../../src/SFML/Window/OSXCocoa/Joystick.hpp"/>
-					<F N="../../src/SFML/Window/OSXCocoa/VideoModeSupport.cpp"/>
-					<F N="../../src/SFML/Window/OSXCocoa/VideoModeSupport.hpp"/>
-					<F N="../../src/SFML/Window/OSXCocoa/WindowController.h"/>
-					<F N="../../src/SFML/Window/OSXCocoa/WindowImplCocoa.hpp"/>
 				</Folder>
 				<Folder
 					Name="Win32"
 					Filters="">
-					<F N="../../src/SFML/Window/Win32/Joystick.cpp"/>
-					<F N="../../src/SFML/Window/Win32/Joystick.hpp"/>
-					<F N="../../src/SFML/Window/Win32/VideoModeSupport.cpp"/>
-					<F N="../../src/SFML/Window/Win32/VideoModeSupport.hpp"/>
-					<F N="../../src/SFML/Window/Win32/WindowImplWin32.cpp"/>
-					<F N="../../src/SFML/Window/Win32/WindowImplWin32.hpp"/>
 				</Folder>
-				<F N="../../src/SFML/Window/Input.cpp"/>
-				<F N="../../src/SFML/Window/Joystick.hpp"/>
-				<F N="../../src/SFML/Window/VideoMode.cpp"/>
-				<F N="../../src/SFML/Window/VideoModeSupport.hpp"/>
-				<F N="../../src/SFML/Window/Window.cpp"/>
-				<F N="../../src/SFML/Window/WindowImpl.cpp"/>
-				<F N="../../src/SFML/Window/WindowImpl.hpp"/>
 			</Folder>
 		</Folder>
 		<Folder
@@ -273,32 +191,10 @@
 			<Folder
 				Name="Audio"
 				Filters="">
-				<F N="../../include/SFML/Audio/AudioResource.hpp"/>
-				<F N="../../include/SFML/Audio.hpp"/>
-				<F N="../../include/SFML/Audio/Listener.hpp"/>
-				<F N="../../include/SFML/Audio/Music.hpp"/>
-				<F N="../../include/SFML/Audio/SoundBuffer.hpp"/>
-				<F N="../../include/SFML/Audio/SoundBufferRecorder.hpp"/>
-				<F N="../../include/SFML/Audio/Sound.hpp"/>
-				<F N="../../include/SFML/Audio/SoundRecorder.hpp"/>
-				<F N="../../include/SFML/Audio/SoundStream.hpp"/>
 			</Folder>
 			<Folder
 				Name="Graphics"
 				Filter="">
-				<F N="../../include/SFML/Graphics/Color.hpp"/>
-				<F N="../../include/SFML/Graphics/Drawable.hpp"/>
-				<F N="../../include/SFML/Graphics/Font.hpp"/>
-				<F N="../../include/SFML/Graphics/Image.hpp"/>
-				<F N="../../include/SFML/Graphics/Matrix3.hpp"/>
-				<F N="../../include/SFML/Graphics/PostFX.hpp"/>
-				<F N="../../include/SFML/Graphics/Rect.hpp"/>
-				<F N="../../include/SFML/Graphics/RenderWindow.hpp"/>
-				<F N="../../include/SFML/Graphics/Shape.hpp"/>
-				<F N="../../include/SFML/Graphics/Sprite.hpp"/>
-				<F N="../../include/SFML/Graphics/String.hpp"/>
-				<F N="../../include/SFML/Graphics/VideoResource.hpp"/>
-				<F N="../../include/SFML/Graphics/View.hpp"/>
 			</Folder>
 			<Folder
 				Name="Network"
@@ -306,21 +202,11 @@
 				<Folder
 					Name="Unix"
 					Filters="">
-					<F N="../../include/SFML/Network/Unix/SocketHelper.hpp"/>
 				</Folder>
 				<Folder
 					Name="Win32"
 					Filters="">
-					<F N="../../include/SFML/Network/Win32/SocketHelper.hpp"/>
 				</Folder>
-				<F N="../../include/SFML/Network/IPAddress.hpp"/>
-				<F N="../../include/SFML/Network/Packet.hpp"/>
-				<F N="../../include/SFML/Network/SelectorBase.hpp"/>
-				<F N="../../include/SFML/Network/Selector.hpp"/>
-				<F N="../../include/SFML/Network/SocketHelper.hpp"/>
-				<F N="../../include/SFML/Network/Sockets.hpp"/>
-				<F N="../../include/SFML/Network/SocketTCP.hpp"/>
-				<F N="../../include/SFML/Network/SocketUDP.hpp"/>
 			</Folder>
 			<Folder
 				Name="System"
@@ -328,43 +214,238 @@
 				<Folder
 					Name="Unix"
 					Filters="">
-					<F N="../../include/SFML/System/Unix/Mutex.hpp"/>
-					<F N="../../include/SFML/System/Unix/Thread.hpp"/>
 				</Folder>
 				<Folder
 					Name="Win32"
 					Filters="">
-					<F N="../../include/SFML/System/Win32/Mutex.hpp"/>
-					<F N="../../include/SFML/System/Win32/Thread.hpp"/>
 				</Folder>
-				<F N="../../include/SFML/System/Clock.hpp"/>
-				<F N="../../include/SFML/System/Lock.hpp"/>
-				<F N="../../include/SFML/System/Mutex.hpp"/>
-				<F N="../../include/SFML/System/NonCopyable.hpp"/>
-				<F N="../../include/SFML/System/Randomizer.hpp"/>
-				<F N="../../include/SFML/System/Sleep.hpp"/>
-				<F N="../../include/SFML/System/Thread.hpp"/>
-				<F N="../../include/SFML/System/Vector2.hpp"/>
-				<F N="../../include/SFML/System/Vector3.hpp"/>
 			</Folder>
 			<Folder
 				Name="System"
 				Filters="">
-				<F N="../../include/SFML/Window/Event.hpp"/>
-				<F N="../../include/SFML/Window/Input.hpp"/>
-				<F N="../../include/SFML/Window/OpenGL.hpp"/>
-				<F N="../../include/SFML/Window/VideoMode.hpp"/>
-				<F N="../../include/SFML/Window/WindowHandle.hpp"/>
-				<F N="../../include/SFML/Window/Window.hpp"/>
-				<F N="../../include/SFML/Window/WindowListener.hpp"/>
-				<F N="../../include/SFML/Window/WindowSettings.hpp"/>
-				<F N="../../include/SFML/Window/WindowStyle.hpp"/>
 			</Folder>
-			<F N="../../include/SFML/Config.hpp"/>
-			<F N="../../include/SFML/Graphics.hpp"/>
-			<F N="../../include/SFML/Network.hpp"/>
-			<F N="../../include/SFML/System.hpp"/>
-			<F N="../../include/SFML/Window.hpp"/>
+		</Folder>
+	</CustomFolders>
+	<Files AutoFolders="DirectoryView">
+		<Folder Name="../../include">
+			<Folder Name="SFML">
+				<Folder Name="Audio">
+					<F N="../../include/SFML/Audio/AudioResource.hpp"/>
+					<F N="../../include/SFML/Audio/Listener.hpp"/>
+					<F N="../../include/SFML/Audio/Music.hpp"/>
+					<F N="../../include/SFML/Audio/Sound.hpp"/>
+					<F N="../../include/SFML/Audio/SoundBuffer.hpp"/>
+					<F N="../../include/SFML/Audio/SoundBufferRecorder.hpp"/>
+					<F N="../../include/SFML/Audio/SoundRecorder.hpp"/>
+					<F N="../../include/SFML/Audio/SoundStream.hpp"/>
+				</Folder>
+				<Folder Name="Graphics">
+					<F N="../../include/SFML/Graphics/Color.hpp"/>
+					<F N="../../include/SFML/Graphics/Drawable.hpp"/>
+					<F N="../../include/SFML/Graphics/Font.hpp"/>
+					<F N="../../include/SFML/Graphics/Image.hpp"/>
+					<F N="../../include/SFML/Graphics/Matrix3.hpp"/>
+					<F N="../../include/SFML/Graphics/PostFX.hpp"/>
+					<F N="../../include/SFML/Graphics/Rect.hpp"/>
+					<F N="../../include/SFML/Graphics/RenderWindow.hpp"/>
+					<F N="../../include/SFML/Graphics/Shape.hpp"/>
+					<F N="../../include/SFML/Graphics/Sprite.hpp"/>
+					<F N="../../include/SFML/Graphics/String.hpp"/>
+					<F N="../../include/SFML/Graphics/VideoResource.hpp"/>
+					<F N="../../include/SFML/Graphics/View.hpp"/>
+				</Folder>
+				<Folder Name="Network">
+					<Folder Name="Unix">
+						<F N="../../include/SFML/Network/Unix/SocketHelper.hpp"/>
+					</Folder>
+					<Folder Name="Win32">
+						<F N="../../include/SFML/Network/Win32/SocketHelper.hpp"/>
+					</Folder>
+					<F N="../../include/SFML/Network/IPAddress.hpp"/>
+					<F N="../../include/SFML/Network/Packet.hpp"/>
+					<F N="../../include/SFML/Network/Selector.hpp"/>
+					<F N="../../include/SFML/Network/SelectorBase.hpp"/>
+					<F N="../../include/SFML/Network/SocketHelper.hpp"/>
+					<F N="../../include/SFML/Network/Sockets.hpp"/>
+					<F N="../../include/SFML/Network/SocketTCP.hpp"/>
+					<F N="../../include/SFML/Network/SocketUDP.hpp"/>
+				</Folder>
+				<Folder Name="System">
+					<Folder Name="Unix">
+						<F N="../../include/SFML/System/Unix/Mutex.hpp"/>
+						<F N="../../include/SFML/System/Unix/Thread.hpp"/>
+					</Folder>
+					<Folder Name="Win32">
+						<F N="../../include/SFML/System/Win32/Mutex.hpp"/>
+						<F N="../../include/SFML/System/Win32/Thread.hpp"/>
+					</Folder>
+					<F N="../../include/SFML/System/Clock.hpp"/>
+					<F N="../../include/SFML/System/Lock.hpp"/>
+					<F N="../../include/SFML/System/Mutex.hpp"/>
+					<F N="../../include/SFML/System/NonCopyable.hpp"/>
+					<F N="../../include/SFML/System/Randomizer.hpp"/>
+					<F N="../../include/SFML/System/Sleep.hpp"/>
+					<F N="../../include/SFML/System/Thread.hpp"/>
+					<F N="../../include/SFML/System/Vector2.hpp"/>
+					<F N="../../include/SFML/System/Vector3.hpp"/>
+				</Folder>
+				<Folder Name="Window">
+					<F N="../../include/SFML/Window/Event.hpp"/>
+					<F N="../../include/SFML/Window/Input.hpp"/>
+					<F N="../../include/SFML/Window/OpenGL.hpp"/>
+					<F N="../../include/SFML/Window/VideoMode.hpp"/>
+					<F N="../../include/SFML/Window/Window.hpp"/>
+					<F N="../../include/SFML/Window/WindowHandle.hpp"/>
+					<F N="../../include/SFML/Window/WindowListener.hpp"/>
+					<F N="../../include/SFML/Window/WindowSettings.hpp"/>
+					<F N="../../include/SFML/Window/WindowStyle.hpp"/>
+				</Folder>
+				<F N="../../include/SFML/Audio.hpp"/>
+				<F N="../../include/SFML/Config.hpp"/>
+				<F N="../../include/SFML/Graphics.hpp"/>
+				<F N="../../include/SFML/Network.hpp"/>
+				<F N="../../include/SFML/System.hpp"/>
+				<F N="../../include/SFML/Window.hpp"/>
+			</Folder>
+		</Folder>
+		<Folder Name="../../src">
+			<Folder Name="SFML">
+				<Folder Name="Audio">
+					<Folder Name="stb_vorbis">
+						<F N="../../src/SFML/Audio/stb_vorbis/stb_vorbis.c"/>
+						<F N="../../src/SFML/Audio/stb_vorbis/stb_vorbis.h"/>
+					</Folder>
+					<F N="../../src/SFML/Audio/AudioDevice.cpp"/>
+					<F N="../../src/SFML/Audio/AudioDevice.hpp"/>
+					<F N="../../src/SFML/Audio/AudioResource.cpp"/>
+					<F N="../../src/SFML/Audio/Listener.cpp"/>
+					<F N="../../src/SFML/Audio/Music.cpp"/>
+					<F N="../../src/SFML/Audio/OpenAL.hpp"/>
+					<F N="../../src/SFML/Audio/Sound.cpp"/>
+					<F N="../../src/SFML/Audio/SoundBuffer.cpp"/>
+					<F N="../../src/SFML/Audio/SoundBufferRecorder.cpp"/>
+					<F N="../../src/SFML/Audio/SoundFile.cpp"/>
+					<F N="../../src/SFML/Audio/SoundFile.hpp"/>
+					<F N="../../src/SFML/Audio/SoundFileDefault.cpp"/>
+					<F N="../../src/SFML/Audio/SoundFileDefault.hpp"/>
+					<F N="../../src/SFML/Audio/SoundFileOgg.cpp"/>
+					<F N="../../src/SFML/Audio/SoundFileOgg.hpp"/>
+					<F N="../../src/SFML/Audio/SoundRecorder.cpp"/>
+					<F N="../../src/SFML/Audio/SoundStream.cpp"/>
+				</Folder>
+				<Folder Name="Graphics">
+					<F N="../../src/SFML/Graphics/Arial.hpp"/>
+					<F N="../../src/SFML/Graphics/Color.cpp"/>
+					<F N="../../src/SFML/Graphics/Drawable.cpp"/>
+					<F N="../../src/SFML/Graphics/Font.cpp"/>
+					<F N="../../src/SFML/Graphics/FontLoader.cpp"/>
+					<F N="../../src/SFML/Graphics/FontLoader.hpp"/>
+					<F N="../../src/SFML/Graphics/Image.cpp"/>
+					<F N="../../src/SFML/Graphics/ImageLoader.cpp"/>
+					<F N="../../src/SFML/Graphics/ImageLoader.hpp"/>
+					<F N="../../src/SFML/Graphics/Matrix3.cpp"/>
+					<F N="../../src/SFML/Graphics/PostFX.cpp"/>
+					<F N="../../src/SFML/Graphics/Renderer.cpp"/>
+					<F N="../../src/SFML/Graphics/Renderer.hpp"/>
+					<F N="../../src/SFML/Graphics/RenderWindow.cpp"/>
+					<F N="../../src/SFML/Graphics/Shape.cpp"/>
+					<F N="../../src/SFML/Graphics/Sprite.cpp"/>
+					<F N="../../src/SFML/Graphics/String.cpp"/>
+					<F N="../../src/SFML/Graphics/VideoResource.cpp"/>
+					<F N="../../src/SFML/Graphics/View.cpp"/>
+				</Folder>
+				<Folder Name="Main">
+					<F N="../../src/SFML/Main/SFML_Main.cpp"/>
+				</Folder>
+				<Folder Name="Network">
+					<Folder Name="Unix">
+						<F N="../../src/SFML/Network/Unix/SocketHelper.cpp"/>
+					</Folder>
+					<Folder Name="Win32">
+						<F N="../../src/SFML/Network/Win32/SocketHelper.cpp"/>
+					</Folder>
+					<F N="../../src/SFML/Network/IPAddress.cpp"/>
+					<F N="../../src/SFML/Network/Packet.cpp"/>
+					<F N="../../src/SFML/Network/SelectorBase.cpp"/>
+					<F N="../../src/SFML/Network/SocketTCP.cpp"/>
+					<F N="../../src/SFML/Network/SocketUDP.cpp"/>
+				</Folder>
+				<Folder Name="System">
+					<Folder Name="Unix">
+						<F N="../../src/SFML/System/Unix/Mutex.cpp"/>
+						<F N="../../src/SFML/System/Unix/Platform.cpp"/>
+						<F N="../../src/SFML/System/Unix/Platform.hpp"/>
+						<F N="../../src/SFML/System/Unix/Thread.cpp"/>
+					</Folder>
+					<Folder Name="Win32">
+						<F N="../../src/SFML/System/Win32/Mutex.cpp"/>
+						<F N="../../src/SFML/System/Win32/Platform.cpp"/>
+						<F N="../../src/SFML/System/Win32/Platform.hpp"/>
+						<F N="../../src/SFML/System/Win32/Thread.cpp"/>
+					</Folder>
+					<F N="../../src/SFML/System/Clock.cpp"/>
+					<F N="../../src/SFML/System/Lock.cpp"/>
+					<F N="../../src/SFML/System/Platform.hpp"/>
+					<F N="../../src/SFML/System/Randomizer.cpp"/>
+					<F N="../../src/SFML/System/Sleep.cpp"/>
+				</Folder>
+				<Folder Name="Window">
+					<Folder Name="glext">
+						<F N="../../src/SFML/Window/glext/glext.h"/>
+						<F N="../../src/SFML/Window/glext/glxext.h"/>
+						<F N="../../src/SFML/Window/glext/wglext.h"/>
+					</Folder>
+					<Folder Name="Linux">
+						<F N="../../src/SFML/Window/Linux/Joystick.cpp"/>
+						<F N="../../src/SFML/Window/Linux/Joystick.hpp"/>
+						<F N="../../src/SFML/Window/Linux/VideoModeSupport.cpp"/>
+						<F N="../../src/SFML/Window/Linux/VideoModeSupport.hpp"/>
+						<F N="../../src/SFML/Window/Linux/WindowImplX11.cpp"/>
+						<F N="../../src/SFML/Window/Linux/WindowImplX11.hpp"/>
+					</Folder>
+					<Folder Name="OSXCarbon">
+						<F N="../../src/SFML/Window/OSXCarbon/Joystick.cpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/Joystick.hpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/JoystickSupport.cpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/JoystickSupport.hpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/VideoModeSupport.cpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/VideoModeSupport.hpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/WindowImplCarbon.cpp"/>
+						<F N="../../src/SFML/Window/OSXCarbon/WindowImplCarbon.hpp"/>
+					</Folder>
+					<Folder Name="OSXCocoa">
+						<F N="../../src/SFML/Window/OSXCocoa/Joystick.cpp"/>
+						<F N="../../src/SFML/Window/OSXCocoa/Joystick.hpp"/>
+						<F N="../../src/SFML/Window/OSXCocoa/VideoModeSupport.cpp"/>
+						<F N="../../src/SFML/Window/OSXCocoa/VideoModeSupport.hpp"/>
+						<F N="../../src/SFML/Window/OSXCocoa/WindowController.h"/>
+						<F N="../../src/SFML/Window/OSXCocoa/WindowImplCocoa.hpp"/>
+					</Folder>
+					<Folder Name="Template for new ports">
+						<F N="../../src/SFML/Window/Template for new ports/Joystick.cpp"/>
+						<F N="../../src/SFML/Window/Template for new ports/Joystick.hpp"/>
+						<F N="../../src/SFML/Window/Template for new ports/VideoModeSupport.cpp"/>
+						<F N="../../src/SFML/Window/Template for new ports/VideoModeSupport.hpp"/>
+						<F N="../../src/SFML/Window/Template for new ports/WindowImplXXX.cpp"/>
+						<F N="../../src/SFML/Window/Template for new ports/WindowImplXXX.hpp"/>
+					</Folder>
+					<Folder Name="Win32">
+						<F N="../../src/SFML/Window/Win32/Joystick.cpp"/>
+						<F N="../../src/SFML/Window/Win32/Joystick.hpp"/>
+						<F N="../../src/SFML/Window/Win32/VideoModeSupport.cpp"/>
+						<F N="../../src/SFML/Window/Win32/VideoModeSupport.hpp"/>
+						<F N="../../src/SFML/Window/Win32/WindowImplWin32.cpp"/>
+						<F N="../../src/SFML/Window/Win32/WindowImplWin32.hpp"/>
+					</Folder>
+					<F N="../../src/SFML/Window/Input.cpp"/>
+					<F N="../../src/SFML/Window/Joystick.hpp"/>
+					<F N="../../src/SFML/Window/VideoMode.cpp"/>
+					<F N="../../src/SFML/Window/VideoModeSupport.hpp"/>
+					<F N="../../src/SFML/Window/Window.cpp"/>
+					<F N="../../src/SFML/Window/WindowImpl.cpp"/>
+					<F N="../../src/SFML/Window/WindowImpl.hpp"/>
+				</Folder>
+			</Folder>
 		</Folder>
 	</Files>
 </Project>

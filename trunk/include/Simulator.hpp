@@ -4,71 +4,77 @@
 #include <Box2D.h>
 #include <list>
 #include "Motors.hpp"
+#include "DebugDraw.hpp"
 
 namespace ento
 {
-	
-	class Contact_cb : public b2ContactListener
-	{
-	public:
-		virtual void Add( const b2ContactPoint* point );
-		virtual void Persist( const b2ContactPoint* point );
-		virtual void Remove( const b2ContactPoint* point );
-		virtual void Result( const b2ContactResult* point );
-	};
 
-	class Simulator
-	{
-	public:
-		struct Settings
-		{
-			Settings( void );
+   class Contact_cb : public b2ContactListener
+   {
+   public:
+      virtual void Add( const b2ContactPoint* point );
+      virtual void Persist( const b2ContactPoint* point );
+      virtual void Remove( const b2ContactPoint* point );
+      virtual void Result( const b2ContactResult* point );
+   };
 
-			float step_size;
-			float max_time;
-			unsigned iterations;
-			b2Vec2 gravity;
-			float g_accel;
-			bool g_point;
-			b2AABB boundries;
-		};
+   class Simulator
+   {
+   public:
+      struct Settings
+      {
+         Settings( void );
 
-		Simulator( const Settings& settings);
+         float step_size;
+         float max_time;
+         unsigned iterations;
+         b2Vec2 gravity;
+         float g_accel;
+         bool g_point;
+         b2AABB boundries;
+      };
 
-		b2World& world( void );
+      Simulator( const Settings& settings);
 
-		void addMotor( Motor* m )
-		{ m_motors.push_back(m); }
+      b2World& world( void );
 
-		unsigned update( float dt );
+      void addMotor( Motor* m )
+      {
+         m_motors.push_back(m);
+      }
 
-		b2Vec2 getGravityNormal( const b2Vec2& position ) const;
-		float getGravityAccel( const b2Vec2& position ) const;
+      unsigned update( float dt );
 
-		unsigned version( void )
-		{ return m_total_steps; }
+      b2Vec2 getGravityNormal( const b2Vec2& position ) const;
+      float getGravityAccel( const b2Vec2& position ) const;
 
-	private:
-		void applyMotors( float dt );
-		void preStep( float dt );
-		void postStep( float dt );
-		void applyGravity( b2Body* body );
-		void resetObject( b2Body* body );
+      unsigned version( void )
+      {
+         return m_total_steps;
+      }
 
-		float m_time;
-		float m_step_size;
-		float m_max_time;
-		unsigned m_iterations;
-		b2Vec2 m_gravity;
-		float m_g_accel;
-		bool m_g_point;
-		b2World m_world;
-		Contact_cb m_contact_cb;
+   private:
+      void applyMotors( float dt );
+      void preStep( float dt );
+      void postStep( float dt );
+      void applyGravity( b2Body* body );
+      void resetObject( b2Body* body );
 
-		unsigned m_total_steps;
+      float m_time;
+      float m_step_size;
+      float m_max_time;
+      unsigned m_iterations;
+      b2Vec2 m_gravity;
+      float m_g_accel;
+      bool m_g_point;
+      b2World m_world;
+      Contact_cb m_contact_cb;
+      DebugDraw m_debug_draw;
 
-		std::list<Motor*> m_motors;
-	};
+      unsigned m_total_steps;
+
+      std::list<Motor*> m_motors;
+   };
 }
 
 #endif // ENTO_SIMULATOR_HPP_INCLUDED

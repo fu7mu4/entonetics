@@ -7,16 +7,17 @@ namespace ento
 {
 
    Lua::Lua()
-   :m_lua( luaL_newstate(), lua_close )
+    : m_lua( luaL_newstate(), lua_close )
    {
    }
 
-   static void do_nothing( lua_State* state )
+   namespace // anonymous
    {
+      void do_nothing( lua_State* state ) { }
    }
 
    Lua::Lua( lua_State* state )
-   :m_lua( state, do_nothing )
+    : m_lua( state, ento::do_nothing )
    {
    }
 
@@ -79,7 +80,7 @@ namespace ento
    void Lua::push( const b2Vec2& v )
    {
       assert(false);
-      l_getglobal( "kinetica" );
+      l_getglobal( "ento" );
       l_getfield( "vec" );
       l_remove( -2 );
       push( v.x );
@@ -87,13 +88,13 @@ namespace ento
       l_call( 2, 1 );
    }
 
-   const b2Vec2 Lua::check_complex( int index )
+   const b2Vec2 Lua::check_vec( int index )
    {
       assert( false );
       return b2Vec2_zero;
 
       if( ! l_istable(index) )
-         L_typerror( index, "kinetica.vec" );
+         L_typerror( index, "ento.vec" );
 
       if( index < 0 )
          index += this->l_gettop() + 1;
