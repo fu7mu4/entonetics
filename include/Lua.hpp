@@ -32,7 +32,7 @@ namespace ento
 
       lua_Number getGlobalNumber( const std::string& num_name );
       const std::string getGlobalString( const std::string& string_name);
-      const b2Vec2 check_complex( int index =-1 );
+      const b2Vec2 check_vec( int index =-1 );
 
       template< typename K >
       void* getRegistryDataPtr( K* reg_key )

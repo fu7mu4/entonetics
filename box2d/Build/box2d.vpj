@@ -126,76 +126,94 @@
 			<Exec CmdLine='as -o "%bd%n.o" "%f"'/>
 		</Rule>
 	</Rules>
-	<Files>
+	<CustomFolders>
 		<Folder
 			Name="Source Files"
 			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
-			<F N="../Source/Common/b2BlockAllocator.cpp"/>
-			<F N="../Source/Dynamics/b2Body.cpp"/>
-			<F N="../Source/Collision/b2BroadPhase.cpp"/>
-			<F N="../Source/Dynamics/Contacts/b2CircleContact.cpp"/>
-			<F N="../Source/Collision/Shapes/b2CircleShape.cpp"/>
-			<F N="../Source/Collision/b2CollideCircle.cpp"/>
-			<F N="../Source/Collision/b2CollidePoly.cpp"/>
-			<F N="../Source/Collision/b2Collision.cpp"/>
-			<F N="../Source/Dynamics/Contacts/b2Contact.cpp"/>
-			<F N="../Source/Dynamics/b2ContactManager.cpp"/>
-			<F N="../Source/Dynamics/Contacts/b2ContactSolver.cpp"/>
-			<F N="../Source/Collision/b2Distance.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2DistanceJoint.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2GearJoint.cpp"/>
-			<F N="../Source/Dynamics/b2Island.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2Joint.cpp"/>
-			<F N="../Source/Common/b2Math.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2MouseJoint.cpp"/>
-			<F N="../Source/Collision/b2PairManager.cpp"/>
-			<F N="../Source/Dynamics/Contacts/b2PolyAndCircleContact.cpp"/>
-			<F N="../Source/Dynamics/Contacts/b2PolyContact.cpp"/>
-			<F N="../Source/Collision/Shapes/b2PolygonShape.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2PrismaticJoint.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2PulleyJoint.cpp"/>
-			<F N="../Source/Dynamics/Joints/b2RevoluteJoint.cpp"/>
-			<F N="../Source/Common/b2Settings.cpp"/>
-			<F N="../Source/Collision/Shapes/b2Shape.cpp"/>
-			<F N="../Source/Common/b2StackAllocator.cpp"/>
-			<F N="../Source/Collision/b2TimeOfImpact.cpp"/>
-			<F N="../Source/Dynamics/b2World.cpp"/>
-			<F N="../Source/Dynamics/b2WorldCallbacks.cpp"/>
 		</Folder>
 		<Folder
 			Name="Header Files"
 			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
-			<F N="../Source/Common/b2BlockAllocator.h"/>
-			<F N="../Source/Dynamics/b2Body.h"/>
-			<F N="../Source/Collision/b2BroadPhase.h"/>
-			<F N="../Source/Dynamics/Contacts/b2CircleContact.h"/>
-			<F N="../Source/Collision/Shapes/b2CircleShape.h"/>
-			<F N="../Source/Collision/b2Collision.h"/>
-			<F N="../Source/Dynamics/Contacts/b2Contact.h"/>
-			<F N="../Source/Dynamics/b2ContactManager.h"/>
-			<F N="../Source/Dynamics/Contacts/b2ContactSolver.h"/>
-			<F N="../Source/Dynamics/Joints/b2DistanceJoint.h"/>
-			<F N="../Source/Dynamics/Joints/b2GearJoint.h"/>
-			<F N="../Source/Dynamics/b2Island.h"/>
-			<F N="../Source/Dynamics/Joints/b2Joint.h"/>
-			<F N="../Source/Common/b2Math.h"/>
-			<F N="../Source/Dynamics/Joints/b2MouseJoint.h"/>
-			<F N="../Source/Dynamics/Contacts/b2NullContact.h"/>
-			<F N="../Source/Collision/b2PairManager.h"/>
-			<F N="../Source/Dynamics/Contacts/b2PolyAndCircleContact.h"/>
-			<F N="../Source/Dynamics/Contacts/b2PolyContact.h"/>
-			<F N="../Source/Collision/Shapes/b2PolygonShape.h"/>
-			<F N="../Source/Dynamics/Joints/b2PrismaticJoint.h"/>
-			<F N="../Source/Dynamics/Joints/b2PulleyJoint.h"/>
-			<F N="../Source/Dynamics/Joints/b2RevoluteJoint.h"/>
-			<F N="../Source/Common/b2Settings.h"/>
-			<F N="../Source/Collision/Shapes/b2Shape.h"/>
-			<F N="../Source/Common/b2StackAllocator.h"/>
-			<F N="../Source/Dynamics/b2World.h"/>
-			<F N="../Source/Dynamics/b2WorldCallbacks.h"/>
+		</Folder>
+	</CustomFolders>
+	<Files AutoFolders="DirectoryView">
+		<Folder Name="../Include">
 			<F N="../Include/Box2D.h"/>
-			<F N="../Source/Common/Fixed.h"/>
-			<F N="../Source/Common/jtypes.h"/>
+		</Folder>
+		<Folder Name="../Source">
+			<Folder Name="Collision">
+				<Folder Name="Shapes">
+					<F N="../Source/Collision/Shapes/b2CircleShape.cpp"/>
+					<F N="../Source/Collision/Shapes/b2CircleShape.h"/>
+					<F N="../Source/Collision/Shapes/b2PolygonShape.cpp"/>
+					<F N="../Source/Collision/Shapes/b2PolygonShape.h"/>
+					<F N="../Source/Collision/Shapes/b2Shape.cpp"/>
+					<F N="../Source/Collision/Shapes/b2Shape.h"/>
+				</Folder>
+				<F N="../Source/Collision/b2BroadPhase.cpp"/>
+				<F N="../Source/Collision/b2BroadPhase.h"/>
+				<F N="../Source/Collision/b2CollideCircle.cpp"/>
+				<F N="../Source/Collision/b2CollidePoly.cpp"/>
+				<F N="../Source/Collision/b2Collision.cpp"/>
+				<F N="../Source/Collision/b2Collision.h"/>
+				<F N="../Source/Collision/b2Distance.cpp"/>
+				<F N="../Source/Collision/b2PairManager.cpp"/>
+				<F N="../Source/Collision/b2PairManager.h"/>
+				<F N="../Source/Collision/b2TimeOfImpact.cpp"/>
+			</Folder>
+			<Folder Name="Common">
+				<F N="../Source/Common/b2BlockAllocator.cpp"/>
+				<F N="../Source/Common/b2BlockAllocator.h"/>
+				<F N="../Source/Common/b2Math.cpp"/>
+				<F N="../Source/Common/b2Math.h"/>
+				<F N="../Source/Common/b2Settings.cpp"/>
+				<F N="../Source/Common/b2Settings.h"/>
+				<F N="../Source/Common/b2StackAllocator.cpp"/>
+				<F N="../Source/Common/b2StackAllocator.h"/>
+				<F N="../Source/Common/Fixed.h"/>
+				<F N="../Source/Common/jtypes.h"/>
+			</Folder>
+			<Folder Name="Dynamics">
+				<Folder Name="Contacts">
+					<F N="../Source/Dynamics/Contacts/b2CircleContact.cpp"/>
+					<F N="../Source/Dynamics/Contacts/b2CircleContact.h"/>
+					<F N="../Source/Dynamics/Contacts/b2Contact.cpp"/>
+					<F N="../Source/Dynamics/Contacts/b2Contact.h"/>
+					<F N="../Source/Dynamics/Contacts/b2ContactSolver.cpp"/>
+					<F N="../Source/Dynamics/Contacts/b2ContactSolver.h"/>
+					<F N="../Source/Dynamics/Contacts/b2NullContact.h"/>
+					<F N="../Source/Dynamics/Contacts/b2PolyAndCircleContact.cpp"/>
+					<F N="../Source/Dynamics/Contacts/b2PolyAndCircleContact.h"/>
+					<F N="../Source/Dynamics/Contacts/b2PolyContact.cpp"/>
+					<F N="../Source/Dynamics/Contacts/b2PolyContact.h"/>
+				</Folder>
+				<Folder Name="Joints">
+					<F N="../Source/Dynamics/Joints/b2DistanceJoint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2DistanceJoint.h"/>
+					<F N="../Source/Dynamics/Joints/b2GearJoint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2GearJoint.h"/>
+					<F N="../Source/Dynamics/Joints/b2Joint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2Joint.h"/>
+					<F N="../Source/Dynamics/Joints/b2MouseJoint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2MouseJoint.h"/>
+					<F N="../Source/Dynamics/Joints/b2PrismaticJoint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2PrismaticJoint.h"/>
+					<F N="../Source/Dynamics/Joints/b2PulleyJoint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2PulleyJoint.h"/>
+					<F N="../Source/Dynamics/Joints/b2RevoluteJoint.cpp"/>
+					<F N="../Source/Dynamics/Joints/b2RevoluteJoint.h"/>
+				</Folder>
+				<F N="../Source/Dynamics/b2Body.cpp"/>
+				<F N="../Source/Dynamics/b2Body.h"/>
+				<F N="../Source/Dynamics/b2ContactManager.cpp"/>
+				<F N="../Source/Dynamics/b2ContactManager.h"/>
+				<F N="../Source/Dynamics/b2Island.cpp"/>
+				<F N="../Source/Dynamics/b2Island.h"/>
+				<F N="../Source/Dynamics/b2World.cpp"/>
+				<F N="../Source/Dynamics/b2World.h"/>
+				<F N="../Source/Dynamics/b2WorldCallbacks.cpp"/>
+				<F N="../Source/Dynamics/b2WorldCallbacks.h"/>
+			</Folder>
 		</Folder>
 	</Files>
 </Project>
