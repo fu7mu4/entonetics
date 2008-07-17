@@ -76,7 +76,7 @@ Simulator::Simulator( const Simulator::Settings& settings )
 {
    m_world.SetContactListener( &m_contact_cb );
    m_world.SetDebugDraw( &m_debug_draw );
-   m_debug_draw.SetFlags( 0xffffffff );
+   m_debug_draw.SetFlags( b2DebugDraw::e_shapeBit );
 }
 
 b2World& Simulator::
@@ -110,17 +110,16 @@ update( float dt )
    m_time += dt;
    m_time = std::min( m_time, m_max_time );
 
-   unsigned steps = 0;
+   unsigned last_total = m_total_steps;
    while( m_step_size < m_time )
    {
       m_time -= m_step_size;
       preStep( dt );
+      ++m_total_steps;
       m_world.Step( m_step_size, m_iterations );
-      ++steps;
       postStep( dt );
    }
-   m_total_steps += steps;
-   return steps;
+   return m_total_steps - last_total;
 }
 
 void Simulator::
@@ -153,7 +152,8 @@ preStep( float dt )
    b2Body* body = m_world.GetBodyList();
    while( body )
    {
-      reinterpret_cast<Object*>( body->GetUserData() )->preStep(dt);
+      Object* obj = reinterpret_cast<Object*>( body->GetUserData() );
+      if( obj ) obj->preStep(dt);
       applyGravity( body );
 
       body = body->GetNext();
@@ -166,7 +166,8 @@ postStep( float dt )
    b2Body* body = m_world.GetBodyList();
    while( body )
    {
-      reinterpret_cast<Object*>( body->GetUserData() )->postStep(dt);
+      Object* obj = reinterpret_cast<Object*>( body->GetUserData() );
+      if( obj ) obj->postStep(dt);
       body = body->GetNext();
    }
 }

@@ -14,6 +14,27 @@ namespace
       out << std::complex<float>(vec.x,vec.y);
       return out;
    }
+
+   b2PolygonDef m_tridef;
+   std::ostream& operator << ( std::ostream& out, const b2PolygonDef& p )
+   {
+      unsigned last = p.vertexCount-1;
+      float area = 0.f;
+      float perimeter = 0.f;
+      out << p.vertexCount;
+      for( unsigned i=0; i<p.vertexCount; ++i )
+      {
+         area += b2Cross( p.vertices[last], p.vertices[i] );
+         perimeter += (p.vertices[i] - p.vertices[last]).Length();
+         last = i;
+      }
+      area *= 0.5;
+
+      //out << " Area: " << area << " Permeter: " << perimeter;
+      //out << " p/a: " << perimeter/area << " p^2/a: " << (perimeter*perimeter)/area;
+      out << " p^2/a: " << (perimeter*perimeter)/area;
+      return out;
+   }
 }
 
 namespace ento
@@ -35,22 +56,23 @@ namespace ento
       /// @param vec point to encompass
       inline void expandAABB( b2AABB& aabb, const b2Vec2& vec )
       {
+         const float epsilon = 0.1f;
          if( vec.x < aabb.lowerBound.x )
          {
-            aabb.lowerBound.x = vec.x;
+            aabb.lowerBound.x = vec.x - epsilon;
          }
          if( vec.y < aabb.lowerBound.y )
          {
-            aabb.lowerBound.y = vec.y;
+            aabb.lowerBound.y = vec.y - epsilon;
          }
 
          if( vec.x > aabb.upperBound.x )
          {
-            aabb.upperBound.x = vec.x;
+            aabb.upperBound.x = vec.x + epsilon;
          }
          if( vec.y > aabb.upperBound.y )
          {
-            aabb.upperBound.y = vec.y;
+            aabb.upperBound.y = vec.y + epsilon;
          }
       }
 
@@ -159,10 +181,11 @@ namespace ento
    {
       if( self->m_tri_index == 0 )
       {
-         self->m_new_triangles.push_back( Triangle() );
+         self->m_new_polygons.push_back( Polygon() );
+         self->m_new_polygons.back().num_points = 3;
       }
 
-      Triangle& t = self->m_new_triangles.back();
+      Polygon& t = self->m_new_polygons.back();
       t.points[self->m_tri_index] = i;
       ++self->m_tri_index;
 
@@ -200,23 +223,22 @@ namespace ento
    processAABB( void )
    {
       const int32 max_query = 64;
-      Triangle* query[max_query];
+      Polygon* query[max_query];
       int32 count = m_colldet.Query(m_aabb, reinterpret_cast<void**>(query), max_query);
       assert( count < max_query );
       for( int32 i=0; i<count; ++i )
       {
-         Triangle& t = *query[i];
+         Polygon& p = *query[i];
          //move triangle into old triangles list
-         m_old_triangles.splice( m_old_triangles.end(), m_triangles, 
-                                 tri2iter( &t ) );
+         m_old_polygons.splice( m_old_polygons.end(), m_polygons, 
+                                 poly2iter( &p ) );
 
          gluTessBeginContour( m_tess );
-         gluTessVertex( m_tess, m_points[t.points[0]].values,
-                        reinterpret_cast<void*>( t.points[0] ) );
-         gluTessVertex( m_tess, m_points[t.points[1]].values,
-                        reinterpret_cast<void*>( t.points[1] ) );
-         gluTessVertex( m_tess, m_points[t.points[2]].values,
-                        reinterpret_cast<void*>( t.points[2] ) );
+         for( unsigned i=0; i<p.num_points; ++i )
+         {
+            gluTessVertex( m_tess, m_points[p.points[i]].values,
+                           reinterpret_cast<void*>( p.points[i] ) );
+         }
          gluTessEndContour( m_tess );
       }
    }
@@ -225,15 +247,15 @@ namespace ento
 /// @remarks removes 'new' triangles if they match existing triangles
 /// @return true if matching triangle found
    bool TerrainManager::
-   processOldTriangles_inner( Tri_iter old_iter )
+   processOldTriangles_inner( Poly_iter old_iter )
    {
-      Tri_iter new_iter = m_new_triangles.begin();
-      Tri_iter new_end = m_new_triangles.end();
+      Poly_iter new_iter = m_new_polygons.begin();
+      Poly_iter new_end = m_new_polygons.end();
       while( new_iter != new_end )
       {
-         if( same( *new_iter, *old_iter ) )
+         if( false && same( *new_iter, *old_iter ) )
          {
-            new_iter = m_new_triangles.erase(new_iter);
+            new_iter = m_new_polygons.erase(new_iter);
             return true;
          }
          ++new_iter;
@@ -244,15 +266,18 @@ namespace ento
    void TerrainManager::
    processOldTriangles( void )
    {
-      Tri_iter old_iter = m_old_triangles.begin();
-      Tri_iter old_end = m_old_triangles.end();
+      Poly_iter old_iter = m_old_polygons.begin();
+      Poly_iter old_end = m_old_polygons.end();
+      std::size_t old_size = m_old_polygons.size();
+      std::cerr << old_size << " to be updated\n";
       while( old_iter != old_end )
       {
          if( processOldTriangles_inner( old_iter ) )
          {
-            Tri_iter tmp = old_iter++;
+            Poly_iter tmp = old_iter++;
             // move tmp from old tri list to tri list
-            m_triangles.splice( m_triangles.end(), m_old_triangles, tmp );
+            m_polygons.splice( m_polygons.end(), m_old_polygons, tmp );
+            std::cerr << "1 polygon merge\n";
          }
          else
          {
@@ -261,62 +286,326 @@ namespace ento
                m_body->DestroyShape( old_iter->s );
             }
             m_colldet.DestroyProxy( old_iter->proxyID );
-            m_tri_lookup.erase( m_tri_lookup.find(&(*old_iter)) );
+            m_poly_lookup.erase( m_poly_lookup.find(&(*old_iter)) );
             ++old_iter;
          }
       }
-      m_old_triangles.clear();
+      m_old_polygons.clear();
    }
 
    void TerrainManager::
    processNewTriangles( void )
    {
-      Tri_iter iter = m_new_triangles.begin();
-      Tri_iter end = m_new_triangles.end();
+      remove_slivers();
+
+      Poly_iter iter = m_new_polygons.begin();
+      Poly_iter end = m_new_polygons.end();
+      std::cerr << m_new_polygons.size() << " new triangles to be added\n";
       while( iter != end )
       {
-         m_tridef.userData = &(*iter);
-
-         m_tridef.vertices[0] = point2vec( iter->points[0] );
-         m_tridef.vertices[1] = point2vec( iter->points[1] );
-         m_tridef.vertices[2] = point2vec( iter->points[2] );
-
-         b2Vec2 side_a = m_tridef.vertices[1] - m_tridef.vertices[0];
-         b2Vec2 side_b = m_tridef.vertices[2] - m_tridef.vertices[0];
-         b2Vec2 side_c = m_tridef.vertices[2] - m_tridef.vertices[1];
-
-         float len_a = side_a.LengthSquared();
-         float len_b = side_b.LengthSquared();
-         float len_c = side_c.LengthSquared();
-
-         float area = b2Cross( side_a, side_b ) * 0.5f;
-
-         if( area <= std::numeric_limits<float>::epsilon() )
+         if( ! valid_triangle(*iter) )
          {
-            std::cerr << "Ignoring degenerate triangle\n";
-            iter = m_new_triangles.erase(iter);
+            iter = m_new_polygons.erase(iter);
+            std::cerr << "throwing away a triangle!\n";
+            continue;
+         }
+
+         // build up edge info for this polygon
+         unsigned last = iter->num_points-1;
+         unsigned i = 0;
+         while( i < iter->num_points )
+         {
+            Key k( iter->points[last],iter->points[i]);;
+            std::map<Key,EdgeInfo>::iterator found;
+            found = m_edge_lookup.find(k);
+            // update current edge
+            if( found != m_edge_lookup.end() )
+            {
+               assert( found->second.b == end );
+               found->second.b = iter;
+            }
+            else // create new edge
+            {
+               EdgeInfo ei;
+               ei.a = iter;
+               ei.b = end;
+               bool success = m_edge_lookup.insert( std::make_pair(k,ei) ).second;
+               assert(success);
+            }
+            last = i++;
+         }// for  all points
+         ++iter;
+      }// while iter is not end
+
+      // ignore all unshared edges
+      Edge_iter e_iter = m_edge_lookup.begin();
+      Edge_iter e_end = m_edge_lookup.end();
+      while( e_iter != e_end )
+      {
+         if( e_iter->second.a == end ||
+             e_iter->second.b == end )
+         {
+            m_edge_lookup.erase(e_iter++);
          }
          else
          {
-            iter->proxyID = m_colldet.CreateProxy( tri2aabb(*iter), &(*iter) );
-            if( side_a.LengthSquared() > m_min_len_sqrd &&
-                side_b.LengthSquared() > m_min_len_sqrd &&
-                side_c.LengthSquared() > m_min_len_sqrd &&
-                area > 0.06f )
+            ++e_iter;
+         }
+      }
+
+      std::cerr << m_edge_lookup.size() << " shared edges\n";
+
+      process_merge();
+
+      std::cerr << m_new_polygons.size() << " new polygons to be added\n";
+
+      // finish all remaining new polygons
+      iter = m_new_polygons.begin();
+      while( iter != end )
+      {
+         m_tridef.userData = &(*iter);
+         m_tridef.vertexCount = iter->num_points;
+         for( int i=0; i<m_tridef.vertexCount; ++i )
+         {
+            m_tridef.vertices[i] = point2vec( iter->points[i] );
+         }
+         std::cerr << "creating polygon: " << m_tridef << '\n';
+         iter->proxyID = m_colldet.CreateProxy( poly2aabb(*iter), &(*iter) );
+         iter->s = static_cast<b2PolygonShape*>( m_body->CreateShape(&m_tridef));
+         m_poly_lookup[&(*iter)] = iter;
+         ++iter;
+      }
+
+      // move entire new list into the real list
+      m_polygons.splice( m_polygons.end(), m_new_polygons );
+      assert( m_new_polygons.empty() );
+   }
+
+   void TerrainManager::
+   remove_slivers( void )
+   {
+      Poly_iter iter = m_new_polygons.begin();
+      Poly_iter end = m_new_polygons.end();
+
+      while( iter != end )
+      {
+         assert( iter->num_points == 3 );
+
+         bool  removed_triangle = false;
+         unsigned last = 2;
+         for( unsigned i=0; i<3; ++i )
+         {
+            b2Vec2 edge = point2vec( iter->points[i]) - point2vec( iter->points[last]);
+            if( edge.LengthSquared() < 1 )
             {
-               iter->s = static_cast<b2PolygonShape*>( m_body->CreateShape(&m_tridef));
+               removed_triangle = true;
+               // keep the lower index, that way we won't invalidate any of the
+               //  current polygons, this is the same reason the merge point
+               //  is only deleted instead of merged
+               std::size_t keep = std::min( iter->points[i], iter->points[last] );
+               std::size_t merge = std::max( iter->points[i], iter->points[last] );
+               iter = m_new_polygons.erase( iter );
+               std::cerr << "removed a sliver " << edge << "\n";
+
+               // update all other triangles
+               Poly_iter iter2 = m_new_polygons.begin();
+               while( iter2 != end )
+               {
+                  std::size_t* points = iter2->points;
+                  std::size_t* end_ptr = points + iter2->num_points;
+
+                  std::size_t* merge_ptr = std::find( points, end_ptr, merge );
+                  if( merge_ptr != end_ptr )
+                  {  // remove the ones losing and edge
+                     // these will have both the keep and merge ends of the edge
+                     if( std::find( points, end_ptr, keep ) != end_ptr )
+                     {
+                        std::cerr << "chain removing a sliver\n";
+                        // in case we're removing iter
+                        if( iter == iter2 )
+                           { iter = iter2 = m_new_polygons.erase( iter2 ); }
+                        else
+                           { iter2 = m_new_polygons.erase( iter2 ); }
+                     }
+                     else
+                     { // just updating a point, still has three edges
+                        *merge_ptr = keep;
+                     }
+                  }// if merge present
+                  else
+                  {
+                     ++iter2;
+                  }
+               }// update all new triangles
+
+               break; // just removed this triangle stop
+                      // iterating over its edges
+            }// if edge too short
+
+            last = i;
+         }// for each edge
+
+         // removing a triangle advances the iterator.
+         if( !removed_triangle  )
+            { ++iter; }
+      }// loop over all new triangles
+   }
+
+   /// detect degenerate (flat) triangles
+   /// @param p triangle to check ( must be 3 sided poly )
+   /// @return whether p is a valid triangle
+   bool TerrainManager::
+   valid_triangle( const TerrainManager::Polygon& p ) const
+   {
+      assert( p.num_points == 3 );
+      b2Vec2 one;
+      b2Vec2 two;
+      get_adjacent_edges(p,one,two);
+      return b2Cross( two, one) > std::numeric_limits<float>::epsilon();
+   }
+
+   /// process each edge info, if the polygons can be merged, send them to do_merge
+   void TerrainManager::
+   process_merge( void )
+   {
+      while( !m_edge_lookup.empty() )
+      {
+         std::map<Key,EdgeInfo>::iterator iter = m_edge_lookup.begin();
+         const Key k = iter->first;
+         Poly_iter a = iter->second.a;
+         Poly_iter b = iter->second.b;
+
+         assert( a != m_new_polygons.end() );
+         assert( b != m_new_polygons.end() );
+
+         rotate_to_edge( *a, k );
+         b2Vec2 a_ccw;
+         b2Vec2 a_cw;
+         get_adjacent_edges( *a, a_ccw, a_cw );
+
+         rotate_to_edge( *b, k );
+         b2Vec2 b_ccw;
+         b2Vec2 b_cw;
+         get_adjacent_edges( *b, b_ccw, b_cw );
+
+         m_edge_lookup.erase(iter);
+
+         const float epsilon = std::numeric_limits<float>::epsilon();
+
+         if( b2Cross( a_ccw, b_cw ) > epsilon &&
+             b2Cross( b_ccw, a_cw ) > epsilon )
+         {
+            do_merge( a, b );
+            m_new_polygons.erase( b );
+         }
+      }// while
+   }
+
+   /// rotate polygons points so that the start and end point are the shared edge
+   /// @param p polygon to rotate
+   /// @param k key of edge to rotate to
+   void TerrainManager::
+   rotate_to_edge( TerrainManager::Polygon& p, const TerrainManager::Key& k ) const
+   {
+      // find index of end of edge
+      std::size_t index;
+      if( p.points[0] == k.lo || p.points[0] == k.hi )
+      {
+         if( p.points[p.num_points-1] == k.lo || p.points[p.num_points-1] == k.hi )
+         {
+            index = 0;
+         }
+         else
+         {
+            assert( p.points[1] == k.lo || p.points[1] == k.hi );
+            index = 1;
+         }
+      }
+      else
+      {
+         for( unsigned i=1; i<p.num_points; ++i )
+         {
+            if( p.points[i] == k.lo || p.points[i] == k.hi )
+            {
+               assert( p.points[i+1] == k.lo || p.points[i+1] == k.hi );
+               index = i + 1;
+               break;
+            }
+         }
+      }
+
+      std::rotate( p.points, p.points+index, p.points+p.num_points );
+   }
+
+   /// get the normalized edge leading away from the shared edge
+   /// @param primary will contain CCW edge
+   /// @param secondary will contain CW edge
+   void TerrainManager::
+   get_adjacent_edges( const TerrainManager::Polygon& p,
+                       b2Vec2& ccw, b2Vec2& cw ) const
+   {
+      assert( p.num_points > 2 );
+      ccw = point2vec(p.points[1]) - point2vec(p.points[0]);
+      ccw *= b2InvSqrt(ccw.LengthSquared());
+      cw = point2vec(p.points[p.num_points - 2]) -
+                  point2vec(p.points[p.num_points - 1]);
+      cw *= b2InvSqrt(cw.LengthSquared());
+   }
+
+   /// merge b into a
+   /// @param a polygon sharing an edge
+   /// @param b polygon sharing an edge
+   void TerrainManager::
+   do_merge( TerrainManager::Poly_iter a, TerrainManager::Poly_iter b )
+   {
+      assert( a->points[0] == b->points[ b->num_points-1] );
+      assert( b->points[0] == a->points[ a->num_points-1] );
+      
+      // skip the edge points (the first and last point)
+      for( unsigned i=1; i<b->num_points-1; ++i )
+      {
+         a->points[ a->num_points++ ] = b->points[i];
+      }
+
+      // update edge list so that edges that used to be shared with b
+      // are now shared with a
+      std::map<Key,EdgeInfo>::iterator iter, end;
+      iter = m_edge_lookup.begin();
+      end = m_edge_lookup.end();
+      while( iter != end )
+      {
+         if( b == iter->second.a )
+         {
+            if( iter->second.b->num_points + a->num_points > b2_maxPolygonVertices + 2 )
+            {
+               // the combined polygon would have too many vertices, so just
+               // discard it
+               m_edge_lookup.erase( iter++ );
             }
             else
             {
-               std::cerr << "Intangible triangle\n";
-               iter->s = NULL;
+               iter->second.a = a;
+               ++iter;
             }
-            m_tri_lookup[&(*iter)] = iter;
+         }
+         else if( b == iter->second.b )
+         {
+            if( iter->second.a->num_points + a->num_points > b2_maxPolygonVertices + 2 )
+            {
+               m_edge_lookup.erase( iter++ );
+            }
+            else
+            {
+               iter->second.b = a;
+               ++iter;
+            }
+         }
+         else
+         {
             ++iter;
          }
       }
-      // move entire new list into tri list
-      m_triangles.splice( m_triangles.end(), m_new_triangles );
+
    }
 
    b2Vec2 TerrainManager::
@@ -325,12 +614,12 @@ namespace ento
       return b2Vec2( m_points[point].values[0], m_points[point].values[1] );
    }
 
-   TerrainManager::Tri_iter TerrainManager::
-   tri2iter( Triangle* tri ) const
+   TerrainManager::Poly_iter TerrainManager::
+   poly2iter( Polygon* poly ) const
    {
-      std::map<Triangle*,Tri_iter>::const_iterator found;
-      found = m_tri_lookup.find(tri);
-      if( found == m_tri_lookup.end() )
+      std::map<Polygon*,Poly_iter>::const_iterator found;
+      found = m_poly_lookup.find(poly);
+      if( found == m_poly_lookup.end() )
       {
          throw std::runtime_error("Triangle lookup failed");
       }
@@ -338,14 +627,15 @@ namespace ento
    }
 
    b2AABB TerrainManager::
-   tri2aabb( const TerrainManager::Triangle& tri ) const
+   poly2aabb( const TerrainManager::Polygon& poly ) const
    {
       b2AABB aabb;
       ento::initAABB(aabb);
 
-      ento::expandAABB( aabb, point2vec(tri.points[0]) );
-      ento::expandAABB( aabb, point2vec(tri.points[1]) );
-      ento::expandAABB( aabb, point2vec(tri.points[2]) );
+      for( unsigned i=0; i<poly.num_points; ++i )
+      {
+         ento::expandAABB( aabb, point2vec(poly.points[i]) );
+      }
 
       return aabb;
    }
@@ -354,8 +644,8 @@ namespace ento
    /// @param lhs
    /// @param rhs
    bool TerrainManager::
-   same ( const TerrainManager::Triangle& lhs,
-          const TerrainManager::Triangle& rhs ) const
+   same ( const TerrainManager::Polygon& lhs,
+          const TerrainManager::Polygon& rhs ) const
    {
       if( rhs.points[0] == lhs.points[0] &&
           rhs.points[1] == lhs.points[1] &&
@@ -394,6 +684,4 @@ namespace ento
       values[1] = vec.y;
       values[2] = 0.0;
    }
-
-
 }

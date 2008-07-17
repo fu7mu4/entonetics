@@ -34,7 +34,7 @@ namespace ento
 
          virtual bool alive(void)
          {
-            return m_version <= The_Sim->version();
+            return The_Sim->version() == m_version;
          }
 
          virtual void draw( sf::RenderWindow& app )
@@ -76,11 +76,18 @@ namespace ento
       sf::GLPrimative& p = dg->primative();
       p.SetRenderMode( sf::Render::Polygon );
 
+      DebugGraphic* db = new DebugGraphic;
+      The_Graphics->add(db);
+      sf::GLPrimative& outline = db->primative();
+      outline.SetRenderMode( sf::Render::Line_Loop );
+
       for( int32 i=vertexCount-1; i>0; --i )
       {
          p.AddVertex( The_Viewing->world2draw(vertices[i]), convert(color) );
+         outline.AddVertex( The_Viewing->world2draw( vertices[i]), sf::Color::Black );
       }
       p.AddVertex( The_Viewing->world2draw( vertices[0] ), invert(color) );
+      outline.AddVertex( The_Viewing->world2draw( vertices[0]), sf::Color::Black );
    }
    
    void DebugDraw::
@@ -102,15 +109,16 @@ namespace ento
    {
       DebugGraphic* dg = new DebugGraphic;
       The_Graphics->add(dg);
-      //sf::Shape& s = dg->shape();
+      sf::GLPrimative& p = dg->primative();
+      p.SetRenderMode( sf::Render::Polygon );
 
-      const float angle_step = b2_pi * (1.f/11.f);
+      const float angle_step = 2 * b2_pi * (1.f/11.f);
       float origin = atan2( axis.y, axis.x );
-      //s.AddPoint( The_Viewing->world2draw(center + b2Vec2(cos(origin), sin(origin))), invert(color) );
+      p.AddVertex( The_Viewing->world2draw(center + radius*b2Vec2(cos(origin), sin(origin))), invert(color) );
       for( unsigned i=1; i<11; ++i )
       {
-         const float angle = origin + i * angle_step;
-         //s.AddPoint( The_Viewing->world2draw(center + radius*b2Vec2(cos(angle), sin(angle))), convert(color) );
+         const float angle = origin - i * angle_step;
+         p.AddVertex( The_Viewing->world2draw(center + radius*b2Vec2(cos(angle), sin(angle))), convert(color) );
       }
 
    }

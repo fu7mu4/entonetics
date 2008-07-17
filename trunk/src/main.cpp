@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <sstream>
 #include <complex>
+#include <limits>
 
 #include "Animation.hpp"
 #include "Terrain.hpp"
@@ -72,7 +73,7 @@ void Draw( sf::RenderWindow& app, b2World& world, const sf::Color& c )
 int main()
 {
    ento::Simulator::Settings sim_set;
-   sim_set.g_accel *= 0;
+   sim_set.g_accel *= 9.81;
    ento::Simulator sim(sim_set);
    ento::The_Sim = &sim;
 
@@ -85,45 +86,15 @@ int main()
    ento::TerrainManager terr( terr_set );
    ento::The_Terrain = &terr;
 
-   sf::Randomizer::SetSeed(1);
-
    std::vector<b2Vec2> points;
-   float x = 40.f;
-   while ( x > -40.f )
-   {
-      points.push_back( b2Vec2( x, sf::Randomizer::Random(8,12) ) );
-      x -= sf::Randomizer::Random(5,10);
-   }
-   points.push_back( b2Vec2(-40, 10.f) );
-   points.push_back( b2Vec2(-40, 0.f) );
-   points.push_back( b2Vec2(-20, 0.f) );
-   points.push_back( b2Vec2(0, 0.f) );
-   points.push_back( b2Vec2(20, 0.f) );
-   points.push_back( b2Vec2(40, 0.f) );
+   points.push_back( b2Vec2( 40,-10) );
+   points.push_back( b2Vec2( 40, 10) );
+   points.push_back( b2Vec2(-40, 10) );
+   points.push_back( b2Vec2(-40,-10) );
 
-   //terr.addOutline(points.begin(), points.end());
-   //terr.beginUpdate();
-   //terr.newOutline( points.begin(), points.end());
-
-   points.clear();
-   points.push_back( b2Vec2(30,1) );
-   points.push_back( b2Vec2(30, 5) );
-   //points.push_back( b2Vec2(20, 5) );
-   //points.push_back( b2Vec2(10, 5) );
-   //points.push_back( b2Vec2(0, 5) );
-   //points.push_back( b2Vec2(-10, 5) );
-   //points.push_back( b2Vec2(-20, 5) );
-   points.push_back( b2Vec2(-30, 5) );
-   points.push_back( b2Vec2(-30, 1) );
-   //points.push_back( b2Vec2(-20, 1) );
-   //points.push_back( b2Vec2(-10, 1) );
-   //points.push_back( b2Vec2(0, 1) );
-   //points.push_back( b2Vec2(10, 1) );
-   //points.push_back( b2Vec2(20, 1) );
-
-   //terr.subtractOutline(points.begin(), points.end());
-   //terr.newOutline( points.rbegin(), points.rend() );
-   //terr.endUpdate();
+   terr.beginUpdate();
+   terr.newOutline( points.begin(), points.end());
+   terr.endUpdate();
    points.clear();
 
    b2CircleDef circDef;
@@ -132,8 +103,23 @@ int main()
    circDef.radius = 1;
    circDef.density = 1;
 
+   b2PolygonDef boxDef;
+   boxDef.density = 1;
+   boxDef.vertexCount = 4;
+   boxDef.vertices[0].Set( -1, -1 );
+   boxDef.vertices[1].Set(  1, -1 );
+   boxDef.vertices[2].Set(  1,  1 );
+   //boxDef.vertices[3].Set(  0.0,  0.1 + std::numeric_limits<float>::epsilon() );
+   boxDef.vertices[3].Set( -1,  1 );
+
    b2BodyDef bodyDef;
-   bodyDef.position.Set( 0, 0 );
+   bodyDef.position.Set( 0, 20 );
+   bodyDef.userData = new ento::Object(ento::Object::e_Shot);
+
+   b2Body* b = sim.world().CreateBody(&bodyDef);
+   b->CreateShape(&boxDef);
+   b->SetMassFromShapes();
+   b->SetUserData( new ento::Object(ento::Object::e_Shot) );
 
    // Create the main rendering window
    sf::RenderWindow App(sf::VideoMode(800, 600, 32), "Entonetics");//, sf::Style::Fullscreen );
@@ -178,7 +164,9 @@ int main()
                points.push_back( b2Vec2(0,5) + vec );
                points.push_back( b2Vec2(-5,0) + vec );
                points.push_back( b2Vec2(0,-5) + vec );
-               terr.subtractOutline( points.begin(), points.end() );
+               points.clear();
+               points.push_back( vec );
+               terr.addOutline( points.begin(), points.end() );
                points.clear();
                break;
             }
@@ -190,14 +178,6 @@ int main()
             case sf::Key::Q:
                done = true;
                break;
-            case sf::Key::B:
-               {
-                  b2Body* b = sim.world().CreateBody(&bodyDef);
-                  b->CreateShape(&circDef);
-                  b->SetMassFromShapes();
-                  b->SetUserData( new ento::Object(ento::Object::e_Shot) );
-                  break;
-               }
             case sf::Key::L:
                {
                   std::complex<float> c;
@@ -246,7 +226,6 @@ int main()
       }
 
 
-      //Draw( App, sim.world(), sf::Color::Blue );
       graphics.draw(App);
 
       // Display window contents on screen

@@ -48,21 +48,21 @@ namespace ento
 
 
    private:
-      struct Triangle
+      struct Polygon
       {
          b2PolygonShape* s;
          int32 proxyID;
-         std::size_t points[3];
-         bool matching( const Triangle& other );
+         std::size_t num_points;
+         std::size_t points[8];
       };
-      std::list<Triangle> m_triangles;
-      std::list<Triangle> m_new_triangles;
-      std::list<Triangle> m_old_triangles;
-      typedef std::list<Triangle>::iterator Tri_iter;
-      std::map<Triangle*,Tri_iter> m_tri_lookup;
+      std::list<Polygon> m_polygons;
+      std::list<Polygon> m_new_polygons;
+      std::list<Polygon> m_old_polygons;
+      typedef std::list<Polygon>::iterator Poly_iter;
+      std::map<Polygon*,Poly_iter> m_poly_lookup;
 
       void processOldTriangles( void );
-      bool processOldTriangles_inner( Tri_iter old_iter );
+      bool processOldTriangles_inner( Poly_iter old_iter );
       void processNewTriangles( void );
 
       struct Vertex
@@ -72,6 +72,54 @@ namespace ento
          GLdouble values[3];
       };
       std::vector<Vertex> m_points;
+
+      /// keys store the indices of the points of the edge that two
+      /// polygons share.
+      struct Key
+      {
+         Key( std::size_t a_, std::size_t b_)
+          : lo(a_<b_?a_:b_),
+            hi(a_<b_?b_:a_)
+         { }
+
+         std::size_t lo; ///< index into m_points
+         std::size_t hi; ///< index into m_points
+
+         /// simple comparator for keys
+         bool operator<( const Key& rhs ) const
+         {
+            if( lo < rhs.lo )
+            {
+               return true;
+            }
+
+            if( lo == rhs.lo && hi < rhs.hi )
+            {
+               return true;
+            }
+
+            return false;
+         }
+      };
+
+      /// simply store iterators pointing to both polygons that share the
+      /// edge associated with its key
+      struct EdgeInfo
+      {
+         Poly_iter a; ///< polygon share edge in key
+         Poly_iter b; ///< polygon sharing edge in key
+      };
+
+      typedef std::map<Key,EdgeInfo> edge_map_t;
+      typedef edge_map_t::iterator Edge_iter;
+      std::map<Key,EdgeInfo> m_edge_lookup;
+
+      void remove_slivers( void );
+      bool valid_triangle( const Polygon& p ) const;
+      void rotate_to_edge( Polygon& p, const Key& k ) const;
+      void get_adjacent_edges( const Polygon& p, b2Vec2& ccw, b2Vec2& cw ) const;
+      void process_merge( void );
+      void do_merge( Poly_iter a, Poly_iter b );
 
       static void tess_begin( GLenum type, TerrainManager* self );
       static void tess_end( TerrainManager* self );
@@ -85,10 +133,10 @@ namespace ento
       void processAABB( void );
       b2AABB m_aabb;
 
-      Tri_iter tri2iter( Triangle* tri ) const;
-      b2AABB tri2aabb( const Triangle& tri ) const;
+      Poly_iter poly2iter( Polygon* poly ) const;
+      b2AABB poly2aabb( const Polygon& poly ) const;
       b2Vec2 point2vec( std::size_t point ) const;
-      bool same( const Triangle& lhs, const Triangle& rhs ) const;
+      bool same( const Polygon& lhs, const Polygon& rhs ) const;
 
       Object m_obj;
       b2Body* m_body;
@@ -97,8 +145,7 @@ namespace ento
       class CollDet_cb : public b2PairCallback
       {
       public:
-         virtual void* PairAdded(void *proxyUserData1, void *proxyUserData2)
-         { return NULL; }
+         virtual void* PairAdded(void *proxyUserData1, void *proxyUserData2) { return NULL; }
          virtual void PairRemoved(void *proxyUserData1, void *proxyUserData2, void *pairUserData) { }
       } m_colldet_cb;
 
