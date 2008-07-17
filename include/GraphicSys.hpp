@@ -20,6 +20,10 @@ namespace ento
    public:
       void add( Graphic* g );
       void draw( sf::RenderWindow& app );
+      std::size_t numGraphics(void)
+      {
+         return m_graphics.size();
+      }
 
    private:
       std::list<Graphic*> m_graphics;
